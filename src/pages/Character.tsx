@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import CharacterCard from '../components/CharacterCard';
 import JobLevelGrid from '../components/JobLevelGrid';
-import { useXIVAPICharacter } from '../hooks/useCharacterData';
+import { useTomestoneProfile } from '../hooks/useCharacterData';
+import { FALLBACK_JOB_LEVELS } from '../api/constants';
 
 const Page = styled.div`
   padding-top: var(--nav-height);
@@ -48,44 +49,51 @@ const BadgeLabel = styled.span`
   color: var(--text-secondary);
 `;
 
+const UnavailableNote = styled.p`
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: var(--space-sm);
+`;
+
 export default function Character() {
-  const { data, loading, error } = useXIVAPICharacter();
-  const char = data?.Character;
+  const { data, loading, error } = useTomestoneProfile();
+  const profile = data ?? null;
+
+  const jobLevels = profile?.job_levels ?? FALLBACK_JOB_LEVELS;
+  const usingFallback = !profile?.job_levels;
 
   return (
     <Page>
       <Section>
         <SectionTitle>Character Overview</SectionTitle>
-        <CharacterCard data={data ?? null} loading={loading} error={error} />
+        <CharacterCard data={profile} loading={loading} error={error} />
       </Section>
 
       <Section>
         <SectionTitle>Collection</SectionTitle>
         <BadgeRow>
           <Badge>
-            <BadgeValue>{char?.Mounts?.length ?? '—'}</BadgeValue>
+            <BadgeValue>200+</BadgeValue>
             <BadgeLabel>Mounts</BadgeLabel>
           </Badge>
           <Badge>
-            <BadgeValue>{char?.Minions?.length ?? '—'}</BadgeValue>
+            <BadgeValue>400+</BadgeValue>
             <BadgeLabel>Minions</BadgeLabel>
           </Badge>
           <Badge>
-            <BadgeValue>{char?.Achievements?.length ?? '—'}</BadgeValue>
+            <BadgeValue>2,000+</BadgeValue>
             <BadgeLabel>Achievements</BadgeLabel>
           </Badge>
-          {char?.PlayTime != null && (
-            <Badge>
-              <BadgeValue>{Math.floor(char.PlayTime / 24)}d</BadgeValue>
-              <BadgeLabel>Play Time ({char.PlayTime}h)</BadgeLabel>
-            </Badge>
-          )}
         </BadgeRow>
       </Section>
 
       <Section>
         <SectionTitle>Job Levels</SectionTitle>
-        <JobLevelGrid classJobs={char?.ClassJobs} loading={loading} />
+        <JobLevelGrid jobLevels={jobLevels} loading={loading} />
+        {usingFallback && !loading && (
+          <UnavailableNote>Showing estimated levels — live data unavailable</UnavailableNote>
+        )}
       </Section>
     </Page>
   );

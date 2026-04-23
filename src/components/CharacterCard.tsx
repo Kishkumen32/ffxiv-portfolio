@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { CHARACTER } from '../api/constants';
-import type { XIVAPICharacter } from '../api/xivapi';
+import type { TomestoneProfile } from '../api/tomestone';
 import LoadingSkeleton from './LoadingSkeleton';
 
 const Card = styled.div`
@@ -33,6 +33,19 @@ const Avatar = styled.img`
   object-fit: cover;
 `;
 
+const AvatarPlaceholder = styled.div`
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--accent-gold);
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--accent-gold);
+`;
+
 const Info = styled.div`
   flex: 1;
   min-width: 0;
@@ -61,6 +74,19 @@ const Bio = styled.p`
   line-height: 1.5;
 `;
 
+const DetailRow = styled.div`
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+`;
+
+const Detail = styled.span`
+  font-family: var(--font-mono);
+`;
+
 const LodestoneLink = styled.a`
   display: inline-block;
   margin-top: var(--space-md);
@@ -75,7 +101,7 @@ const LodestoneLink = styled.a`
 `;
 
 interface Props {
-  data: XIVAPICharacter | null;
+  data: TomestoneProfile | null;
   loading: boolean;
   error: string | null;
 }
@@ -97,26 +123,48 @@ export default function CharacterCard({ data, loading, error }: Props) {
   if (error || !data) {
     return (
       <Card>
+        <AvatarPlaceholder>⚔</AvatarPlaceholder>
         <Info>
-          <Name>{CHARACTER.name}</Name>
-          <ServerBadge>{CHARACTER.server} · {CHARACTER.datacenter}</ServerBadge>
-          <Bio>Character data unavailable. Showing cached info.</Bio>
+          <Name>
+            {CHARACTER.name}
+            <ServerBadge>{CHARACTER.server} · {CHARACTER.datacenter}</ServerBadge>
+          </Name>
+          <Bio>Tank. Gunbreaker. Ultimate Raider.</Bio>
+          <DetailRow>
+            <Detail>Main: GNB</Detail>
+            <Detail>Race: Roegadyn</Detail>
+          </DetailRow>
+          <LodestoneLink
+            href={`https://na.finalfantasyxiv.com/lodestone/character/${CHARACTER.lodestoneId}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Lodestone →
+          </LodestoneLink>
         </Info>
       </Card>
     );
   }
 
-  const char = data.Character;
-
   return (
     <Card>
-      <Avatar src={char.Avatar} alt={char.Name} />
+      {data.avatar ? (
+        <Avatar src={data.avatar} alt={data.name} />
+      ) : (
+        <AvatarPlaceholder>⚔</AvatarPlaceholder>
+      )}
       <Info>
         <Name>
-          {char.Name}
-          <ServerBadge>{char.Server} · {char.DC}</ServerBadge>
+          {data.name}
+          <ServerBadge>{data.server} · {data.datacenter}</ServerBadge>
         </Name>
-        {char.Bio && <Bio>{char.Bio}</Bio>}
+        {data.bio && <Bio>{data.bio}</Bio>}
+        <DetailRow>
+          {data.title && <Detail>Title: {data.title}</Detail>}
+          {data.race && <Detail>{data.race} {data.clan}</Detail>}
+          {data.grand_company && <Detail>GC: {data.grand_company}</Detail>}
+          {data.free_company && <Detail>FC: {data.free_company}</Detail>}
+        </DetailRow>
         <LodestoneLink
           href={`https://na.finalfantasyxiv.com/lodestone/character/${CHARACTER.lodestoneId}/`}
           target="_blank"

@@ -36,9 +36,16 @@ const FFLogsLink = styled.a`
   }
 `;
 
+const UnavailableMessage = styled.div`
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+`;
+
 export default function Raiding() {
   const { data: activityData, loading: activityLoading, error: activityError } = useTomestoneActivity();
-  const { data: progressionData, loading: progressionLoading } = useTomestoneProgression();
+  const { data: progressionData, loading: progressionLoading, error: progressionError } = useTomestoneProgression();
 
   const jobs = useMemo(() => {
     if (!activityData?.length) return [CHARACTER.mainJob];
@@ -58,12 +65,22 @@ export default function Raiding() {
     return activityData.filter(a => a.job === selectedJob);
   }, [activityData, selectedJob]);
 
+  const showActivityUnavailable = !activityLoading && (activityError || !activityData?.length);
+  const showProgressionUnavailable = !progressionLoading && (progressionError || !progressionData?.length);
+
   return (
     <Page>
       <Section>
         <SectionTitle>Raiding Profile</SectionTitle>
         <JobTabs jobs={jobs} selected={selectedJob} onSelect={setSelectedJob} />
-        <FightHistoryTable activities={filteredActivity} loading={activityLoading} error={activityError} />
+        {showActivityUnavailable && !activityLoading ? (
+          <UnavailableMessage>
+            Activity data unavailable — check back soon.
+            {activityError && <><br /><small>{activityError}</small></>}
+          </UnavailableMessage>
+        ) : (
+          <FightHistoryTable activities={filteredActivity} loading={activityLoading} error={activityError} />
+        )}
         <FFLogsLink
           href={`https://www.fflogs.com/character/na/${CHARACTER.server}/${CHARACTER.name.replace(' ', '%20')}`}
           target="_blank"
@@ -75,7 +92,14 @@ export default function Raiding() {
 
       <Section>
         <SectionTitle>Progression</SectionTitle>
-        <ProgressionChart data={progressionData ?? []} loading={progressionLoading} />
+        {showProgressionUnavailable && !progressionLoading ? (
+          <UnavailableMessage>
+            Progression data unavailable — check back soon.
+            {progressionError && <><br /><small>{progressionError}</small></>}
+          </UnavailableMessage>
+        ) : (
+          <ProgressionChart data={progressionData ?? []} loading={progressionLoading} />
+        )}
       </Section>
     </Page>
   );

@@ -29,7 +29,7 @@ const FooterLink = styled.a`
 export default function Footer() {
   return (
     <FooterEl>
-      <div>Built with FFXIV data via XIVAPI + Tomestone + FFLogs</div>
+      <div>Built with FFXIV data via Tomestone + FFLogs</div>
       <Links>
         <FooterLink
           href={`https://na.finalfantasyxiv.com/lodestone/character/${CHARACTER.lodestoneId}/`}

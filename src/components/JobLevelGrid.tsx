@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { JOB_IDS, JOB_ROLES, ROLE_COLOR } from '../api/constants';
-import type { XIVAPIClassJob } from '../api/xivapi';
+import { JOB_ROLES, ROLE_COLOR } from '../api/constants';
 import LoadingSkeleton from './LoadingSkeleton';
 
 const Grid = styled.div`
@@ -42,11 +41,13 @@ const JobLevel = styled.span<{ $maxed: boolean }>`
 `;
 
 interface Props {
-  classJobs: XIVAPIClassJob[] | undefined;
+  jobLevels: Record<string, number>;
   loading: boolean;
 }
 
-export default function JobLevelGrid({ classJobs, loading }: Props) {
+const COMBAT_JOBS = ['PLD', 'WAR', 'DRK', 'GNB', 'WHM', 'SCH', 'AST', 'SGE', 'MNK', 'DRG', 'NIN', 'SAM', 'RPR', 'VPR', 'BRD', 'MCH', 'DNC', 'BLM', 'SMN', 'RDM', 'PCT', 'CRP', 'BSM', 'ARM', 'GSM', 'LTW', 'WVR', 'ALC', 'CUL', 'MIN', 'BOT', 'FSH'];
+
+export default function JobLevelGrid({ jobLevels, loading }: Props) {
   if (loading) {
     return (
       <Grid>
@@ -57,19 +58,19 @@ export default function JobLevelGrid({ classJobs, loading }: Props) {
     );
   }
 
-  const jobs = (classJobs || [])
-    .filter(j => j.Level > 0 && JOB_IDS[j.JobID])
-    .sort((a, b) => b.Level - a.Level);
+  const entries = COMBAT_JOBS
+    .filter(job => jobLevels[job] != null)
+    .map(job => ({ job, level: jobLevels[job] }))
+    .sort((a, b) => b.level - a.level);
 
   return (
     <Grid>
-      {jobs.map(j => {
-        const abbr = JOB_IDS[j.JobID] || '???';
-        const role = JOB_ROLES[abbr] || 'dps';
+      {entries.map(({ job, level }) => {
+        const role = JOB_ROLES[job] || 'dps';
         return (
-          <JobCell key={j.JobID} $role={role}>
-            <JobName>{abbr}</JobName>
-            <JobLevel $maxed={j.Level >= 100}>{j.Level}</JobLevel>
+          <JobCell key={job} $role={role}>
+            <JobName>{job}</JobName>
+            <JobLevel $maxed={level >= 100}>{level}</JobLevel>
           </JobCell>
         );
       })}

@@ -1,3 +1,5 @@
+import { fetchWithRetry } from './fetchWithRetry';
+
 export interface TomestoneProfile {
   name: string;
   server: string;
@@ -41,29 +43,31 @@ export interface TomestoneProgression {
 
 export const TOMESTONE_BASE = 'https://tomestone.gg';
 
-export async function fetchTomestoneProfile(): Promise<TomestoneProfile> {
+function authHeaders(): Record<string, string> {
   const key = import.meta.env.VITE_TOMESTONE_API_KEY;
-  const res = await fetch(`${TOMESTONE_BASE}/api/character/profile/Siren/Kish Baiheur`, {
-    headers: key ? { Authorization: `Bearer ${key}` } : {},
-  });
-  if (!res.ok) throw new Error(`Tomestone profile fetch failed: ${res.status}`);
+  return key ? { Authorization: `Bearer ${key}` } : {};
+}
+
+export async function fetchTomestoneProfile(): Promise<TomestoneProfile> {
+  const res = await fetchWithRetry(
+    `${TOMESTONE_BASE}/api/character/profile/Siren/Kish Baiheur`,
+    { headers: authHeaders() },
+  );
   return res.json();
 }
 
 export async function fetchTomestoneActivity(): Promise<TomestoneActivity[]> {
-  const key = import.meta.env.VITE_TOMESTONE_API_KEY;
-  const res = await fetch(`${TOMESTONE_BASE}/api/character/activity/Siren/Kish Baiheur`, {
-    headers: key ? { Authorization: `Bearer ${key}` } : {},
-  });
-  if (!res.ok) throw new Error(`Tomestone activity fetch failed: ${res.status}`);
+  const res = await fetchWithRetry(
+    `${TOMESTONE_BASE}/api/character/activity/Siren/Kish Baiheur`,
+    { headers: authHeaders() },
+  );
   return res.json();
 }
 
 export async function fetchTomestoneProgression(): Promise<TomestoneProgression[]> {
-  const key = import.meta.env.VITE_TOMESTONE_API_KEY;
-  const res = await fetch(`${TOMESTONE_BASE}/api/character/progression-graph/Siren/Kish Baiheur`, {
-    headers: key ? { Authorization: `Bearer ${key}` } : {},
-  });
-  if (!res.ok) throw new Error(`Tomestone progression fetch failed: ${res.status}`);
+  const res = await fetchWithRetry(
+    `${TOMESTONE_BASE}/api/character/progression-graph/Siren/Kish Baiheur`,
+    { headers: authHeaders() },
+  );
   return res.json();
 }

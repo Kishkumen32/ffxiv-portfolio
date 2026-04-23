@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import type { XIVAPIAchievement } from '../api/xivapi';
+import type { FallbackAchievement } from '../api/constants';
 import { useScrollEntrance } from '../hooks/useScrollEntrance';
 
 const Card = styled.div<{ $visible: boolean }>`
@@ -24,13 +24,6 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-`;
-
-const Icon = styled.img`
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
-  background: var(--bg-tertiary);
 `;
 
 const IconPlaceholder = styled.div`
@@ -67,8 +60,19 @@ const Description = styled.div<{ $open: boolean }>`
   padding-top: ${p => p.$open ? 'var(--space-sm)' : '0'};
 `;
 
+const CATEGORY_ICONS: Record<string, string> = {
+  Ultimate: '🏆',
+  Raid: '⚔',
+  Criterion: '🏰',
+  Variant: '🔄',
+  Duty: '📋',
+  Legacy: '📜',
+  Social: '👥',
+  Crafting: '🔨',
+};
+
 interface Props {
-  achievement: XIVAPIAchievement;
+  achievement: FallbackAchievement;
 }
 
 export default function AchievementCard({ achievement }: Props) {
@@ -78,18 +82,13 @@ export default function AchievementCard({ achievement }: Props) {
   return (
     <Card ref={ref} $visible={visible} onClick={() => setOpen(o => !o)}>
       <Header>
-        {achievement.Icon ? (
-          <Icon src={`https://xivapi.com${achievement.Icon}`} alt="" />
-        ) : (
-          <IconPlaceholder>🏆</IconPlaceholder>
-        )}
-        <Name>{achievement.Name}</Name>
-        <DateLabel>{new Date(achievement.Date * 1000).toLocaleDateString()}</DateLabel>
+        <IconPlaceholder>{CATEGORY_ICONS[achievement.category] ?? '🏆'}</IconPlaceholder>
+        <Name>{achievement.name}</Name>
+        <DateLabel>{achievement.date}</DateLabel>
       </Header>
       <Description $open={open}>
-        {achievement.Description}
+        {achievement.description}
       </Description>
     </Card>
   );
 }
-

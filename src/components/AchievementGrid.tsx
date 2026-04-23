@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import type { XIVAPIAchievement } from '../api/xivapi';
+import type { FallbackAchievement } from '../api/constants';
 import { ACHIEVEMENT_CATEGORIES, type AchievementCategory } from '../api/constants';
 import AchievementCard from './AchievementCard';
 
@@ -25,7 +25,7 @@ const FilterBtn = styled.button<{ $active: boolean }>`
   transition: all var(--transition-fast);
 
   &:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold)';
     border-color: var(--accent-gold);
   }
 `;
@@ -49,36 +49,16 @@ const EmptyState = styled.div`
   color: var(--text-secondary);
 `;
 
-const RAID_KEYWORDS = ['savage', 'ultimate', 'raid', 'criterion', 'variant', 'duty', 'deep dungeon', 'eureka', 'bozjan'];
-const CRAFT_KEYWORDS = ['craft', 'gather', 'mining', 'botanist', 'fisher', 'carpenter', 'blacksmith', 'armorer', 'goldsmith', 'leatherworker', 'weaver', 'alchemist', 'culinarian'];
-const SOCIAL_KEYWORDS = ['friend', 'party', 'guild', 'free company', 'pvp', 'feast', 'crystalline conflict', 'social', 'reputation'];
-
-function categorize(a: XIVAPIAchievement): AchievementCategory {
-  const name = a.Name.toLowerCase();
-  const desc = a.Description.toLowerCase();
-  const text = `${name} ${desc}`;
-
-  if (text.includes('ultimate')) return 'Ultimate';
-  if (text.includes('criterion')) return 'Criterion';
-  if (text.includes('variant')) return 'Variant';
-  if (text.includes('savage') || text.includes('raid')) return 'Raid';
-  if (CRAFT_KEYWORDS.some(k => text.includes(k))) return 'Crafting';
-  if (SOCIAL_KEYWORDS.some(k => text.includes(k))) return 'Social';
-  if (RAID_KEYWORDS.some(k => text.includes(k))) return 'Duty';
-  return 'Legacy';
-}
-
 interface Props {
-  achievements: XIVAPIAchievement[];
+  achievements: FallbackAchievement[];
 }
 
 export default function AchievementGrid({ achievements }: Props) {
   const [filter, setFilter] = useState<AchievementCategory | 'All'>('All');
 
-  const sorted = [...achievements].sort((a, b) => b.Date - a.Date);
   const filtered = filter === 'All'
-    ? sorted
-    : sorted.filter(a => categorize(a) === filter);
+    ? achievements
+    : achievements.filter(a => a.category === filter);
 
   return (
     <Container>
@@ -95,11 +75,10 @@ export default function AchievementGrid({ achievements }: Props) {
       ) : (
         <Grid>
           {filtered.map(a => (
-            <AchievementCard key={a.ID} achievement={a} />
+            <AchievementCard key={a.id} achievement={a} />
           ))}
         </Grid>
       )}
     </Container>
   );
 }
-

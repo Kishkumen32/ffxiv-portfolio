@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import AchievementGrid from '../components/AchievementGrid';
-import { useXIVAPICharacter } from '../hooks/useCharacterData';
-import LoadingSkeleton from '../components/LoadingSkeleton';
+import { FALLBACK_ACHIEVEMENTS } from '../api/constants';
+import type { FallbackAchievement } from '../api/constants';
 
 const Page = styled.div`
   padding-top: var(--nav-height);
@@ -27,23 +27,16 @@ const Count = styled.span`
   margin-left: var(--space-sm);
 `;
 
-const LoadingWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
-
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-  }
+const DataSourceNote = styled.p`
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: var(--space-lg);
 `;
 
-export default function Achievements() {
-  const { data, loading, error } = useXIVAPICharacter();
-  const achievements = data?.Character?.Achievements ?? [];
+const achievements: FallbackAchievement[] = FALLBACK_ACHIEVEMENTS;
 
+export default function Achievements() {
   return (
     <Page>
       <Section>
@@ -51,19 +44,8 @@ export default function Achievements() {
           Achievements
           <Count>{achievements.length}</Count>
         </SectionTitle>
-        {loading ? (
-          <LoadingWrapper>
-            {Array.from({ length: 9 }).map((_, i) => (
-              <LoadingSkeleton key={i} width="100%" height={64} radius={8} />
-            ))}
-          </LoadingWrapper>
-        ) : error ? (
-          <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: 'var(--space-2xl)' }}>
-            Failed to load achievements. {error}
-          </div>
-        ) : (
-          <AchievementGrid achievements={achievements} />
-        )}
+        <DataSourceNote>Showing notable achievements — full list coming soon</DataSourceNote>
+        <AchievementGrid achievements={achievements} />
       </Section>
     </Page>
   );

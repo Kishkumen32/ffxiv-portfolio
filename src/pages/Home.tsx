@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import HeroSection from '../components/HeroSection';
 import StatBar from '../components/StatBar';
 import ContactSection from '../components/ContactSection';
-import { useXIVAPICharacter, useTomestoneActivity } from '../hooks/useCharacterData';
+import { useTomestoneActivity } from '../hooks/useCharacterData';
 
 const Page = styled.div`
   padding-top: var(--nav-height);
@@ -23,14 +23,9 @@ const SectionTitle = styled.h2`
 `;
 
 export default function Home() {
-  const { data: xivData } = useXIVAPICharacter();
-  const { data: activityData } = useTomestoneActivity();
+  const { data: activityData, loading, error } = useTomestoneActivity();
 
-  const char = xivData?.Character;
-  const achievementCount = char?.Achievements?.length ?? 0;
-  const mountCount = char?.Mounts?.length ?? 0;
-  const minionCount = char?.Minions?.length ?? 0;
-  const fightCount = activityData?.length ?? 0;
+  const fightCount = loading ? '—' : (error ? '—' : (activityData?.length ?? '—'));
 
   return (
     <Page>
@@ -39,9 +34,9 @@ export default function Home() {
         <SectionTitle>At a Glance</SectionTitle>
         <StatBar stats={[
           { value: fightCount, label: 'Fights Recorded' },
-          { value: achievementCount, label: 'Achievements' },
-          { value: mountCount, label: 'Mounts' },
-          { value: minionCount, label: 'Minions' },
+          { value: '2,000+', label: 'Achievements' },
+          { value: '200+', label: 'Mounts' },
+          { value: '400+', label: 'Minions' },
         ]} />
       </Section>
       <ContactSection />
