@@ -23,19 +23,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Get FFLogs access token
-        run: |
-          TOKEN_RESPONSE=$(curl -s -u "${{ secrets.FFLOGS_CLIENT_ID }}:${{ secrets.FFLOGS_CLIENT_SECRET }}" \
-            -d grant_type=client_credentials \
-            https://www.fflogs.com/oauth/token)
-          FFLOGS_TOKEN=$(echo "$TOKEN_RESPONSE" | grep -o '"access_token":"[^"]*"' | cut -d'"' -f4)
-          echo "FFLOGS_TOKEN=$FFLOGS_TOKEN" >> $GITHUB_ENV
+      - name: Fetch character data (Tomestone + FFLogs)
+        env:
+          TOMESTONE_API_KEY: ${{ secrets.TOMESTONE_API_KEY }}
+          FFLOGS_CLIENT_ID: ${{ secrets.FFLOGS_CLIENT_ID }}
+          FFLOGS_CLIENT_SECRET: ${{ secrets.FFLOGS_CLIENT_SECRET }}
+        run: node scripts/fetch-data.js
 
       - name: Build
-        env:
-          VITE_TOMESTONE_API_KEY: ${{ secrets.TOMESTONE_API_KEY }}
-          VITE_XIVAPI_KEY: ${{ secrets.XIVAPI_KEY }}
-          VITE_FFLOGS_TOKEN: ${{ env.FFLOGS_TOKEN }}
         run: npm run build
 
       - name: Deploy to GitHub Pages

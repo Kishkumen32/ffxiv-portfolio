@@ -41,7 +41,7 @@ const EmptyState = styled.div`
   font-size: 0.95rem;
 `;
 
-const ClearedBadge = styled.span<{ $cleared: boolean }>`
+const ClearedBadge = styled.span<{ $cleared?: boolean }>`
   font-size: 0.8rem;
   padding: 2px 8px;
   border-radius: var(--radius-sm);
