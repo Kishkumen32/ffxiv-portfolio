@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kish Baiheur — FFXIV Portfolio</title>
     <script>
-      // GitHub Pages SPA redirect: store the path and redirect to index.html
       sessionStorage.redirect = location.pathname;
-      location.replace('/ffxiv-portfolio/');
+      var dst = (location.pathname.match(/^\/ffxiv-portfolio/) ? "/ffxiv-portfolio" : "") + "/ffxiv-portfolio/index.html";
+      location.replace(dst);
     </script>
   </head>
   <body>
