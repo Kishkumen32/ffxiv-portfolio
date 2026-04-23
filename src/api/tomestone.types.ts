@@ -5,15 +5,15 @@ export interface TomestoneProfile {
   region: string;
   avatar: string;
   bio: string;
-  title: string;
+  title: { pre: string; post: string } | string;
   race: string;
   clan: string;
   gender: string;
   nameday: string;
   guardian: string;
   city_state: string;
-  grand_company: string;
-  free_company: string;
+  grand_company: { name: string; rank: string } | string;
+  free_company: { name: string; tag: string } | string;
   job_levels: Record<string, number>;
   gear: Record<string, unknown>;
 }

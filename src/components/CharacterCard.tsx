@@ -160,10 +160,10 @@ export default function CharacterCard({ data, loading, error }: Props) {
         </Name>
         {data.bio && <Bio>{data.bio}</Bio>}
         <DetailRow>
-          {data.title && <Detail>Title: {data.title}</Detail>}
+          {data.title && <Detail>Title: {typeof data.title === 'string' ? data.title : `${data.title.pre} ${data.title.post}`.trim()}</Detail>}
           {data.race && <Detail>{data.race} {data.clan}</Detail>}
-          {data.grand_company && <Detail>GC: {data.grand_company}</Detail>}
-          {data.free_company && <Detail>FC: {data.free_company}</Detail>}
+          {data.grand_company && <Detail>GC: {typeof data.grand_company === 'string' ? data.grand_company : data.grand_company.name}</Detail>}
+          {data.free_company && <Detail>FC: {typeof data.free_company === 'string' ? data.free_company : data.free_company.name}</Detail>}
         </DetailRow>
         <LodestoneLink
           href={`https://na.finalfantasyxiv.com/lodestone/character/${CHARACTER.lodestoneId}/`}
