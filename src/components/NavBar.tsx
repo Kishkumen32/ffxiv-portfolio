@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { CHARACTER } from '../api/constants';
 
@@ -50,12 +50,16 @@ const NavLinks = styled.div<{ $open: boolean }>`
   }
 `;
 
-const NavLink = styled(Link)<{ $active: boolean }>`
+const NavItem = styled(NavLink)`
   font-size: 0.9rem;
   font-weight: 500;
-  color: ${p => p.$active ? 'var(--accent-gold)' : 'var(--text-secondary)'};
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color var(--transition-fast);
+
+  &.active {
+    color: var(--accent-gold);
+  }
 
   &:hover {
     color: var(--accent-gold);
@@ -86,18 +90,16 @@ export default function NavBar() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [prevPathname, setPrevPathname] = useState(location.pathname);
-
-  if (location.pathname !== prevPathname) {
-    setPrevPathname(location.pathname);
-    setMobileOpen(false);
-  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
 
   return (
     <Nav $scrolled={scrolled}>
@@ -107,9 +109,9 @@ export default function NavBar() {
       </Hamburger>
       <NavLinks $open={mobileOpen}>
         {links.map(l => (
-          <NavLink key={l.to} to={l.to} $active={location.pathname === l.to}>
+          <NavItem key={l.to} to={l.to} end={l.to === '/'}>
             {l.label}
-          </NavLink>
+          </NavItem>
         ))}
       </NavLinks>
     </Nav>

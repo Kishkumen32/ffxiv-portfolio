@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -8,7 +8,7 @@ import Achievements from './pages/Achievements';
 
 export default function App() {
   return (
-    <BrowserRouter basename="/ffxiv-portfolio">
+    <HashRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,6 +17,6 @@ export default function App() {
         <Route path="/achievements" element={<Achievements />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }

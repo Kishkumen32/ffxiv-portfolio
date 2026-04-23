@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kish Baiheur — FFXIV Portfolio</title>
     <script>
-      sessionStorage.redirect = location.pathname + location.search + location.hash;
-      location.replace("/ffxiv-portfolio/index.html");
+      (function() {
+        var base = '/ffxiv-portfolio';
+        var path = location.pathname.indexOf(base) === 0
+          ? location.pathname.slice(base.length)
+          : location.pathname;
+        var target = base + '/#' + (path || '/');
+
+        if (location.search) {
+          target += location.search;
+        }
+
+        if (location.hash) {
+          target += location.hash;
+        }
+
+        location.replace(target);
+      })();
     </script>
   </head>
   <body>

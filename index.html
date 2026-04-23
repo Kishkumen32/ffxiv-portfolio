@@ -10,17 +10,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      // GitHub Pages SPA redirect: restore path from 404.html
-      // Runs BEFORE React mounts so BrowserRouter sees the correct URL at init
-      (function() {
-        var redirect = sessionStorage.redirect;
-        if (redirect) {
-          delete sessionStorage.redirect;
-          history.replaceState(null, '', redirect);
-        }
-      })();
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
