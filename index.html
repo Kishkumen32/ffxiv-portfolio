@@ -7,7 +7,7 @@
     <meta name="description" content="Kish Baiheur — FFXIV Portfolio. Gunbreaker. Ultimate Raider. Siren (Aether)." />
     <meta name="theme-color" content="#0d1117" />
     <title>Kish Baiheur — FFXIV Portfolio</title>
-    <script type="module" crossorigin src="/ffxiv-portfolio/assets/index-LdaWMiWP.js"></script>
+    <script type="module" crossorigin src="/ffxiv-portfolio/assets/index-Bcs1QI0C.js"></script>
     <link rel="stylesheet" crossorigin href="/ffxiv-portfolio/assets/index-BH4XBasW.css">
   </head>
   <body>
@@ -18,7 +18,7 @@
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
         if (redirect && redirect !== location.pathname) {
-          history.replaceState(null, null, redirect);
+          location.replace(location.origin + redirect);
         }
       })();
     </script>
