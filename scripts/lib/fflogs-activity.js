@@ -12,8 +12,23 @@ const TOKEN_REFRESH_BUFFER_MS = 60_000;
 const RECENT_REPORT_LIMIT = 25;
 const REPORT_CONCURRENCY = 5;
 
+const ABSOLUTE_THRESHOLD = 1577836800000; // Jan 1, 2020 in ms
+
 function normalizeFightTime(reportStartTime, fightTime) {
-  return fightTime < 1_000_000_000_000 ? reportStartTime + fightTime : fightTime;
+  if (fightTime >= ABSOLUTE_THRESHOLD) {
+    return fightTime;  // already absolute
+  }
+  return reportStartTime + fightTime;  // relative to report start
+}
+
+const HIGH_END_MIN_DIFFICULTY = 101; // Savage and above
+const EX_NAME_PATTERNS = [/\bex\b/i, /extreme/i];
+
+function isHighEndFight(fight) {
+  if (fight.difficulty >= HIGH_END_MIN_DIFFICULTY) return true;
+  // Some EX trials have difficulty=100 but contain "EX" in the fight/zone name
+  const name = `${fight.name}`.toLowerCase();
+  return EX_NAME_PATTERNS.some(p => p.test(name));
 }
 
 function normalizeName(value) {
@@ -270,7 +285,8 @@ export async function fetchFFLogsActivity({ name, server, region }) {
       }
 
       const job = getCharacterJob(reportData.masterData?.actors, name);
-      return reportData.fights.map(fight => normalizeFight(report.code, report.startTime, fight, job));
+      const highEndFights = reportData.fights.filter(isHighEndFight);
+      return highEndFights.map(fight => normalizeFight(report.code, report.startTime, fight, job));
     } catch (error) {
       console.warn(`  ?  FFLogs report ${report.code} failed: ${error.message}`);
       return [];

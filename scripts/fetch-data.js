@@ -18,7 +18,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT_PATH = path.join(ROOT, 'src', 'data', 'character.json');
 
-// Character identity — used for both APIs
+// Character identity ï¿½ used for both APIs
 const CHARACTER = {
   name: 'Kish Baiheur',
   server: 'Siren',
@@ -69,27 +69,15 @@ async function getFFLogsToken(clientId, clientSecret) {
 
 async function fetchFFLogsData(token) {
   const query = `
-    query CharacterRankings($name: String!, $server: String!, $region: String!) {
-      characterData(name: $name, server: $server, region: $region) {
-        character {
+    query CharacterRankings($name: String!, $serverSlug: String!, $serverRegion: String!) {
+      characterData {
+        character(name: $name, serverSlug: $serverSlug, serverRegion: $serverRegion) {
           name
-          class
-          spec
-          level
-          rank
+          lodestoneID
+          server { name }
           totalKills
-          mythicPlusKills
-          achievements{
-            id
-          }
-          encounterRankings {
-            encounterID
-            encounterName
-            rank
-            bestAmount
-            totalKills
-            averageItemLevel
-          }
+          rank
+          encounterRankings
         }
       }
     }
@@ -105,8 +93,8 @@ async function fetchFFLogsData(token) {
       query,
       variables: {
         name: CHARACTER.name,
-        server: CHARACTER.server,
-        region: CHARACTER.region,
+        serverSlug: CHARACTER.server,
+        serverRegion: 'NA',
       },
     }),
   });
@@ -278,6 +266,6 @@ async function main() {
 
 main().catch(err => {
   console.error('\n?  fetch-data.js failed:', err.message);
-  // Don't exit non-zero — we want the build to proceed with stale data
+  // Don't exit non-zero ï¿½ we want the build to proceed with stale data
   process.exit(0);
 });

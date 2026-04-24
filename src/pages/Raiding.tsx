@@ -6,6 +6,27 @@ import ProgressionChart from '../components/ProgressionChart';
 import { useTomestoneActivity, useTomestoneProgression } from '../hooks/useCharacterData';
 import { CHARACTER } from '../api/constants';
 
+const FilterRow = styled.div`
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+`;
+
+const FilterButton = styled.button<{ $active: boolean }>`
+  background: ${p => p.$active ? 'var(--accent-blue)' : 'transparent'};
+  color: ${p => p.$active ? 'white' : 'var(--text-secondary)'};
+  border: 1px solid ${p => p.$active ? 'var(--accent-blue)' : 'var(--border-default)'};
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  &:hover {
+    border-color: var(--accent-blue);
+    color: ${p => p.$active ? 'white' : 'var(--accent-blue)'};
+  }
+`;
+
 const Page = styled.div`
   padding-top: var(--nav-height);
 `;
@@ -59,11 +80,15 @@ export default function Raiding() {
   }, [activityData]);
 
   const [selectedJob, setSelectedJob] = useState<string>(CHARACTER.mainJob);
+  const [statusFilter, setStatusFilter] = useState<'all' | 'cleared' | 'incomplete'>('all');
 
   const filteredActivity = useMemo(() => {
     if (!activityData) return [];
-    return activityData.filter(a => a.job === selectedJob);
-  }, [activityData, selectedJob]);
+    let filtered = activityData.filter(a => a.job === selectedJob);
+    if (statusFilter === 'cleared') filtered = filtered.filter(a => a.cleared);
+    if (statusFilter === 'incomplete') filtered = filtered.filter(a => !a.cleared);
+    return filtered;
+  }, [activityData, selectedJob, statusFilter]);
 
   const showActivityUnavailable = !activityLoading && (activityError || !activityData?.length);
   const showProgressionUnavailable = !progressionLoading && (progressionError || !progressionData?.length);
@@ -73,6 +98,11 @@ export default function Raiding() {
       <Section>
         <SectionTitle>Raiding Profile</SectionTitle>
         <JobTabs jobs={jobs} selected={selectedJob} onSelect={setSelectedJob} />
+        <FilterRow>
+          <FilterButton $active={statusFilter === 'all'} onClick={() => setStatusFilter('all')}>All</FilterButton>
+          <FilterButton $active={statusFilter === 'cleared'} onClick={() => setStatusFilter('cleared')}>Cleared ✓</FilterButton>
+          <FilterButton $active={statusFilter === 'incomplete'} onClick={() => setStatusFilter('incomplete')}>Incomplete ✗</FilterButton>
+        </FilterRow>
         {showActivityUnavailable && !activityLoading ? (
           <UnavailableMessage>
             Activity data unavailable - check back soon.
@@ -80,7 +110,7 @@ export default function Raiding() {
           </UnavailableMessage>
         ) : (
           <FightHistoryTable
-            key={selectedJob}
+            key={`${selectedJob}-${statusFilter}`}
             activities={filteredActivity}
             loading={activityLoading}
             error={activityError}
