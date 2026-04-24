@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 
 interface CachedData<T> {
   data: T;
@@ -28,7 +28,7 @@ export function useLocalStorage<T>(key: string, ttl: number = DEFAULT_TTL) {
       const cached: CachedData<T> = { data, timestamp: Date.now() };
       localStorage.setItem(key, JSON.stringify(cached));
     } catch {
-      // Storage quota exceeded or unavailable — silently ignore
+      // Storage quota exceeded or unavailable - silently ignore
     }
   }, [key]);
 
@@ -36,7 +36,7 @@ export function useLocalStorage<T>(key: string, ttl: number = DEFAULT_TTL) {
     localStorage.removeItem(key);
   }, [key]);
 
-  return { get, set, remove };
+  return useMemo(() => ({ get, set, remove }), [get, set, remove]);
 }
 
 export function useCachedFetch<T>(
@@ -48,6 +48,11 @@ export function useCachedFetch<T>(
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const cache = useLocalStorage<T>(key, ttl);
+  const fetcherRef = useRef(fetcher);
+
+  useEffect(() => {
+    fetcherRef.current = fetcher;
+  }, [fetcher]);
 
   useEffect(() => {
     let cancelled = false;
@@ -64,7 +69,7 @@ export function useCachedFetch<T>(
       }
 
       try {
-        const result = await fetcher();
+        const result = await fetcherRef.current();
         if (!cancelled) {
           setData(result);
           cache.set(result);
@@ -79,15 +84,17 @@ export function useCachedFetch<T>(
     }
 
     load();
-    return () => { cancelled = true; };
-  }, [key, cache, fetcher]);
+    return () => {
+      cancelled = true;
+    };
+  }, [cache]);
 
   const refetch = useCallback(async () => {
     cache.remove();
     setLoading(true);
     setError(null);
     try {
-      const result = await fetcher();
+      const result = await fetcherRef.current();
       setData(result);
       cache.set(result);
     } catch (err) {
@@ -95,7 +102,7 @@ export function useCachedFetch<T>(
     } finally {
       setLoading(false);
     }
-  }, [cache, fetcher]);
+  }, [cache]);
 
   return { data, loading, error, refetch };
 }

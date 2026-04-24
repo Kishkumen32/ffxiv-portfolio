@@ -75,18 +75,23 @@ export default function Raiding() {
         <JobTabs jobs={jobs} selected={selectedJob} onSelect={setSelectedJob} />
         {showActivityUnavailable && !activityLoading ? (
           <UnavailableMessage>
-            Activity data unavailable — check back soon.
+            Activity data unavailable - check back soon.
             {activityError && <><br /><small>{activityError}</small></>}
           </UnavailableMessage>
         ) : (
-          <FightHistoryTable activities={filteredActivity} loading={activityLoading} error={activityError} />
+          <FightHistoryTable
+            key={selectedJob}
+            activities={filteredActivity}
+            loading={activityLoading}
+            error={activityError}
+          />
         )}
         <FFLogsLink
           href={`https://www.fflogs.com/character/na/${CHARACTER.server}/${CHARACTER.name.replace(' ', '%20')}`}
           target="_blank"
           rel="noopener noreferrer"
         >
-          View full FFLogs profile →
+          {'View full FFLogs profile ->'}
         </FFLogsLink>
       </Section>
 
@@ -94,7 +99,7 @@ export default function Raiding() {
         <SectionTitle>Progression</SectionTitle>
         {showProgressionUnavailable && !progressionLoading ? (
           <UnavailableMessage>
-            Progression data unavailable — check back soon.
+            Progression data unavailable - check back soon.
             {progressionError && <><br /><small>{progressionError}</small></>}
           </UnavailableMessage>
         ) : (
@@ -104,3 +109,4 @@ export default function Raiding() {
     </Page>
   );
 }
+

@@ -1,7 +1,10 @@
+import { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import type { TomestoneActivity } from '../api/tomestone';
 import PercentileBadge from './PercentileBadge';
 import LoadingSkeleton from './LoadingSkeleton';
+
+const PAGE_SIZE = 20;
 
 const Table = styled.table`
   width: 100%;
@@ -49,6 +52,40 @@ const ClearedBadge = styled.span<{ $cleared?: boolean }>`
   color: ${p => p.$cleared ? 'var(--accent-green)' : 'var(--accent-red)'};
 `;
 
+const Pagination = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+`;
+
+const PaginationButton = styled.button`
+  border: 1px solid var(--border-default);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition-fast), opacity var(--transition-fast);
+
+  &:hover:not(:disabled) {
+    background: var(--bg-hover);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`;
+
+const PaginationInfo = styled.span`
+  text-align: center;
+  flex: 1;
+`;
+
 interface Props {
   activities: TomestoneActivity[];
   loading: boolean;
@@ -56,6 +93,20 @@ interface Props {
 }
 
 export default function FightHistoryTable({ activities, loading, error }: Props) {
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    setPage(1);
+  }, [activities]);
+
+  const total = activities.length;
+  const totalPages = Math.ceil(total / PAGE_SIZE);
+  const start = (page - 1) * PAGE_SIZE;
+  const paginated = useMemo(
+    () => activities.slice(start, start + PAGE_SIZE),
+    [activities, start],
+  );
+
   if (loading) {
     return (
       <div>
@@ -75,31 +126,45 @@ export default function FightHistoryTable({ activities, loading, error }: Props)
   }
 
   return (
-    <Table>
-      <thead>
-        <tr>
-          <Th>Encounter</Th>
-          <Th>Job</Th>
-          <Th>Percentile</Th>
-          <Th>Status</Th>
-          <Th>Date</Th>
-        </tr>
-      </thead>
-      <tbody>
-        {activities.map((a, i) => (
-          <Tr key={i}>
-            <Td>{a.encounter_name || a.fight_name}</Td>
-            <Td>{a.job}</Td>
-            <Td>
-              {a.percentile != null ? (
-                <PercentileBadge percentile={a.percentile} />
-              ) : '—'}
-            </Td>
-            <Td><ClearedBadge $cleared={a.cleared}>{a.cleared ? 'Cleared' : 'Incomplete'}</ClearedBadge></Td>
-            <Td>{new Date(a.date).toLocaleDateString()}</Td>
-          </Tr>
-        ))}
-      </tbody>
-    </Table>
+    <>
+      <Table>
+        <thead>
+          <tr>
+            <Th>Encounter</Th>
+            <Th>Job</Th>
+            <Th>Percentile</Th>
+            <Th>Status</Th>
+            <Th>Date</Th>
+          </tr>
+        </thead>
+        <tbody>
+          {paginated.map((a, i) => (
+            <Tr key={start + i}>
+              <Td>{a.encounter_name || a.fight_name}</Td>
+              <Td>{a.job}</Td>
+              <Td>
+                {a.percentile != null ? (
+                  <PercentileBadge percentile={a.percentile} />
+                ) : '-'}
+              </Td>
+              <Td><ClearedBadge $cleared={a.cleared}>{a.cleared ? 'Cleared' : 'Incomplete'}</ClearedBadge></Td>
+              <Td>{new Date(a.date).toLocaleDateString()}</Td>
+            </Tr>
+          ))}
+        </tbody>
+      </Table>
+
+      <Pagination>
+        <PaginationButton onClick={() => setPage(p => p - 1)} disabled={page === 1}>
+          {'<- Prev'}
+        </PaginationButton>
+        <PaginationInfo>
+          Showing {start + 1}-{Math.min(start + PAGE_SIZE, total)} of {total}
+        </PaginationInfo>
+        <PaginationButton onClick={() => setPage(p => p + 1)} disabled={page === totalPages}>
+          {'Next ->'}
+        </PaginationButton>
+      </Pagination>
+    </>
   );
 }
