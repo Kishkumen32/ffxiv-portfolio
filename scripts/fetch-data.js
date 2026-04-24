@@ -18,7 +18,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT_PATH = path.join(ROOT, 'src', 'data', 'character.json');
 
-// Character identity — used for both APIs
+// Character identity � used for both APIs
 const CHARACTER = {
   name: 'Kish Baiheur',
   server: 'Siren',
@@ -29,7 +29,7 @@ const TOMESTONE_BASE = 'https://tomestone.gg/api';
 const FFLOGS_TOKEN_URL = 'https://www.fflogs.com/oauth/token';
 const FFLOGS_API_URL = 'https://www.fflogs.com/api/v2/client';
 
-// ─── Helpers ────────────────────────────────────────────────────────────────
+// --- Helpers ----------------------------------------------------------------
 
 async function fetchWithRetry(url, options, retries = 3) {
   let lastError;
@@ -116,10 +116,10 @@ async function fetchFFLogsData(token) {
   return json.data?.characterData?.character ?? null;
 }
 
-// ─── Main ─────────────────────────────────────────────────────────────────
+// --- Main -----------------------------------------------------------------
 
 async function main() {
-  console.log('\n📡  Fetching character data...\n');
+  console.log('\n??  Fetching character data...\n');
 
   const tomestoneKey = process.env.TOMESTONE_API_KEY;
   const fflogsClientId = process.env.FFLOGS_CLIENT_ID;
@@ -143,7 +143,7 @@ async function main() {
     }
   }
 
-  // ── Tomestone: Profile ──────────────────────────────────────────────────
+  // -- Tomestone: Profile --------------------------------------------------
   if (tomestoneKey) {
     try {
       console.log(' Fetching Tomestone profile...');
@@ -171,16 +171,19 @@ async function main() {
           job_levels: data.job_levels ?? {},
           gear: data.gear ?? {},
         };
-        console.log(`  ✓  Profile: ${data.name} (${data.server})`);
+        console.log(`  ?  Profile: ${data.name} (${data.server})`);
       }
     } catch (err) {
-      console.warn(`  ✗  Tomestone profile failed: ${err.message}`);
+      console.warn(`  ?  Tomestone profile failed: ${err.message}`);
     }
   } else {
-    console.warn('  ⚠  TOMESTONE_API_KEY not set, skipping Tomestone');
+    console.warn('  ?  TOMESTONE_API_KEY not set, skipping Tomestone');
   }
 
-  // ── Tomestone: Activity ─────────────────────────────────────────────────
+  // -- Activity (Tomestone primary, FFLogs fallback) ---------------------
+  let activitySource = 'empty';
+  characterData.activity = [];
+
   if (tomestoneKey) {
     try {
       console.log('  Fetching Tomestone activity...');
@@ -188,16 +191,43 @@ async function main() {
         `${TOMESTONE_BASE}/character/activity/${CHARACTER.server}/${CHARACTER.name}`,
         { headers: { Authorization: `Bearer ${tomestoneKey}` } }
       );
-      if (Array.isArray(data)) {
-        characterData.activity = data.slice(0, 50); // cap at 50 fights
-        console.log(`  ✓  Activity: ${data.length} fights`);
+      if (Array.isArray(data) && data.length > 0) {
+        characterData.activity = data.slice(0, 50);
+        activitySource = 'tomestone';
+        console.log(`  ?  Activity: ${data.length} fights (tomestone)`);
+      } else {
+        throw new Error('empty array');
       }
     } catch (err) {
-      console.warn(`  ✗  Tomestone activity failed: ${err.message}`);
+      console.warn(`  ?  Tomestone activity failed: ${err.message}, trying FFLogs...`);
     }
   }
 
-  // ── Tomestone: Progression ──────────────────────────────────────────────
+  if (activitySource === 'empty' && fflogsClientId && fflogsClientSecret) {
+    try {
+      console.log('  Fetching FFLogs activity fallback...');
+      const { fetchFFLogsActivity } = await import('./lib/fflogs-activity.js');
+      const fflogsActivity = await fetchFFLogsActivity({
+        name: CHARACTER.name,
+        server: CHARACTER.server,
+        region: 'NA',
+      });
+      if (fflogsActivity.length > 0) {
+        characterData.activity = fflogsActivity;
+        activitySource = 'fflogs fallback';
+        console.log(`  ?  Activity: ${fflogsActivity.length} fights (fflogs fallback)`);
+      }
+    } catch (err) {
+      console.warn(`  ?  FFLogs fallback failed: ${err.message}`);
+    }
+  }
+
+  if (activitySource === 'empty') {
+    characterData.activity = [];
+    console.warn('  ?  Activity: empty (both failed)');
+  }
+
+  // -- Tomestone: Progression ----------------------------------------------
   if (tomestoneKey) {
     try {
       console.log('  Fetching Tomestone progression...');
@@ -207,14 +237,14 @@ async function main() {
       );
       if (Array.isArray(data)) {
         characterData.progression = data;
-        console.log(`  ✓  Progression: ${data.length} encounters`);
+        console.log(`  ?  Progression: ${data.length} encounters`);
       }
     } catch (err) {
-      console.warn(`  ✗  Tomestone progression failed: ${err.message}`);
+      console.warn(`  ?  Tomestone progression failed: ${err.message}`);
     }
   }
 
-  // ── FFLogs ──────────────────────────────────────────────────────────────
+  // -- FFLogs --------------------------------------------------------------
   if (fflogsClientId && fflogsClientSecret) {
     try {
       console.log('  Fetching FFLogs token...');
@@ -224,16 +254,16 @@ async function main() {
       const fflogsData = await fetchFFLogsData(token);
       if (fflogsData) {
         characterData.fflogs = fflogsData;
-        console.log(`  ✓  FFLogs: ${fflogsData.totalKills ?? 0} kills, rank ${fflogsData.rank ?? '?'}`);
+        console.log(`  ?  FFLogs: ${fflogsData.totalKills ?? 0} kills, rank ${fflogsData.rank ?? '?'}`);
       }
     } catch (err) {
-      console.warn(`  ✗  FFLogs failed: ${err.message}`);
+      console.warn(`  ?  FFLogs failed: ${err.message}`);
     }
   } else {
-    console.warn('  ⚠  FFLogs credentials not set, skipping');
+    console.warn('  ?  FFLogs credentials not set, skipping');
   }
 
-  // ── Write output ────────────────────────────────────────────────────────
+  // -- Write output --------------------------------------------------------
   characterData.lastUpdated = new Date().toISOString();
 
   const dir = path.dirname(OUTPUT_PATH);
@@ -242,12 +272,12 @@ async function main() {
   }
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(characterData, null, 2), 'utf8');
-  console.log(`\n✅  Data written to src/data/character.json`);
+  console.log(`\n?  Data written to src/data/character.json`);
   console.log(`    Last updated: ${characterData.lastUpdated}\n`);
 }
 
 main().catch(err => {
-  console.error('\n❌  fetch-data.js failed:', err.message);
-  // Don't exit non-zero — we want the build to proceed with stale data
+  console.error('\n?  fetch-data.js failed:', err.message);
+  // Don't exit non-zero � we want the build to proceed with stale data
   process.exit(0);
 });
