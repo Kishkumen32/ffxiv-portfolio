@@ -31,16 +31,17 @@ jobs:
           TOMESTONE_API_KEY: ${{ secrets.TOMESTONE_API_KEY }}
           FFLOGS_CLIENT_ID: ${{ secrets.FFLOGS_CLIENT_ID }}
           FFLOGS_CLIENT_SECRET: ${{ secrets.FFLOGS_CLIENT_SECRET }}
+          XIVAPI_API_KEY: ${{ secrets.XIVAPI_API_KEY }}
         run: node scripts/fetch-data.js
 
       - name: Commit updated data
         run: |
-          if git diff --quiet src/data/character.json; then
+          if git diff --quiet src/data/character.json src/data/achievements.json; then
             echo "No data changes, skipping commit"
           else
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add src/data/character.json
+            git add src/data/character.json src/data/achievements.json
             git commit -m "chore: refresh character data [skip ci]"
             git push
             echo "data_updated=true" >> $GITHUB_OUTPUT

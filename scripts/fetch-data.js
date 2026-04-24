@@ -17,12 +17,13 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT_PATH = path.join(ROOT, 'src', 'data', 'character.json');
+const ACHIEVEMENTS_PATH = path.join(ROOT, 'src', 'data', 'achievements.json');
+const LODESTONE_ID = '26092605';
 
-// Character identity � used for both APIs
 const CHARACTER = {
   name: 'Kish Baiheur',
   server: 'Siren',
-  region: 'na', // Aether = NA region on FFLogs
+  region: 'na',
 };
 
 const TOMESTONE_BASE = 'https://tomestone.gg/api';
@@ -248,7 +249,24 @@ async function main() {
       console.warn(`  ?  FFLogs failed: ${err.message}`);
     }
   } else {
-    console.warn('  ?  FFLogs credentials not set, skipping');
+    console.warn('  ⚠  FFLogs credentials not set, skipping');
+  }
+
+  // -- Achievements (XIVAPI primary, Lodestone fallback) -------------------
+  let achievementsData = [];
+  try {
+    const { fetchAchievements } = await import('./lib/achievements.js');
+    const xivapiKey = process.env.XIVAPI_API_KEY || undefined;
+    achievementsData = await fetchAchievements(LODESTONE_ID, { apiKey: xivapiKey });
+  } catch (err) {
+    console.warn(`  ⚠  Achievements fetch failed: ${err.message}`);
+    if (fs.existsSync(ACHIEVEMENTS_PATH)) {
+      try {
+        const existing = JSON.parse(fs.readFileSync(ACHIEVEMENTS_PATH, 'utf8'));
+        achievementsData = existing.achievements ?? [];
+        console.warn(`  ⚠  Keeping ${achievementsData.length} existing achievements`);
+      } catch { /* empty */ }
+    }
   }
 
   // -- Write output --------------------------------------------------------
@@ -260,8 +278,16 @@ async function main() {
   }
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(characterData, null, 2), 'utf8');
-  console.log(`\n?  Data written to src/data/character.json`);
+  console.log(`\n✅  Data written to src/data/character.json`);
   console.log(`    Last updated: ${characterData.lastUpdated}\n`);
+
+  const achievementsOutput = {
+    achievements: achievementsData,
+    lastUpdated: new Date().toISOString(),
+  };
+  fs.writeFileSync(ACHIEVEMENTS_PATH, JSON.stringify(achievementsOutput, null, 2), 'utf8');
+  console.log(`✅  Data written to src/data/achievements.json`);
+  console.log(`    ${achievementsData.length} achievements, last updated: ${achievementsOutput.lastUpdated}\n`);
 }
 
 main().catch(err => {
