@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 3942,
+      "name": "Trail to the Heavens",
+      "obtained": "2026-04-28T12:26:36.000Z",
+      "timestamp": 1777379196
+    },
+    {
+      "id": 3977,
+      "name": "Mapping the Realm: The Clyteum",
+      "obtained": "2026-04-28T11:04:23.000Z",
+      "timestamp": 1777374263
+    },
+    {
       "id": 3464,
       "name": "A Life of Adventure VI",
       "obtained": "2026-04-22T02:34:15.000Z",
@@ -7231,5 +7243,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-04-28T08:32:48.896Z"
+  "lastUpdated": "2026-04-28T19:49:07.146Z"
 }
