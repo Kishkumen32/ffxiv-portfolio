@@ -6107,42 +6107,6 @@
       "percentile": null
     },
     {
-      "id": "vn9ZmNc7VAaLCb18:33",
-      "encounter_name": "Red Hot and Deep Blue",
-      "fight_name": "Red Hot and Deep Blue",
-      "name": "Red Hot and Deep Blue",
-      "classification": "Battle",
-      "start": "2026-03-19T00:19:44.889Z",
-      "end": "2026-03-19T00:29:41.282Z",
-      "duration": 596,
-      "kill": true,
-      "cleared": true,
-      "drops": [],
-      "party": 8,
-      "job": "Gunbreaker",
-      "fight": 102,
-      "date": "2026-03-19",
-      "percentile": null
-    },
-    {
-      "id": "vn9ZmNc7VAaLCb18:32",
-      "encounter_name": "Red Hot and Deep Blue",
-      "fight_name": "Red Hot and Deep Blue",
-      "name": "Red Hot and Deep Blue",
-      "classification": "Battle",
-      "start": "2026-03-19T00:10:25.612Z",
-      "end": "2026-03-19T00:14:59.012Z",
-      "duration": 273,
-      "kill": false,
-      "cleared": false,
-      "drops": [],
-      "party": 8,
-      "job": "Gunbreaker",
-      "fight": 102,
-      "date": "2026-03-19",
-      "percentile": null
-    },
-    {
       "id": "DjwkxMHV9aWh7FtZ:63",
       "encounter_name": "Vamp Fatale",
       "fight_name": "Vamp Fatale",
@@ -6811,5 +6775,5 @@
   ],
   "progression": [],
   "fflogs": null,
-  "lastUpdated": "2026-05-03T08:07:35.691Z"
+  "lastUpdated": "2026-05-03T13:22:47.943Z"
 }
