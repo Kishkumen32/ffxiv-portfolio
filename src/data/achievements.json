@@ -1,6 +1,24 @@
 {
   "achievements": [
     {
+      "id": 3980,
+      "name": "The Pursuit of Emptiness",
+      "obtained": "2026-05-03T03:15:06.000Z",
+      "timestamp": 1777778106
+    },
+    {
+      "id": 3978,
+      "name": "Mapping the Realm: Windurst: The Third Walk",
+      "obtained": "2026-05-03T03:15:06.000Z",
+      "timestamp": 1777778106
+    },
+    {
+      "id": 3940,
+      "name": "On the Other Side",
+      "obtained": "2026-05-03T03:15:06.000Z",
+      "timestamp": 1777778106
+    },
+    {
       "id": 3942,
       "name": "Trail to the Heavens",
       "obtained": "2026-04-28T12:26:36.000Z",
@@ -7243,5 +7261,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-02T19:08:36.380Z"
+  "lastUpdated": "2026-05-03T03:43:07.038Z"
 }
