@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 66,
+      "name": "Temper, Temper V",
+      "obtained": "2026-05-08T01:41:39.000Z",
+      "timestamp": 1778204499
+    },
+    {
       "id": 3980,
       "name": "The Pursuit of Emptiness",
       "obtained": "2026-05-03T03:15:06.000Z",
@@ -7261,5 +7267,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-07T19:48:03.698Z"
+  "lastUpdated": "2026-05-08T03:32:57.437Z"
 }
