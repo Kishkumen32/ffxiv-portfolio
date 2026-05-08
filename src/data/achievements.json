@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 720,
+      "name": "I Found That: Miner II",
+      "obtained": "2026-05-08T05:17:13.000Z",
+      "timestamp": 1778217433
+    },
+    {
       "id": 66,
       "name": "Temper, Temper V",
       "obtained": "2026-05-08T01:41:39.000Z",
@@ -7267,5 +7273,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-08T03:32:57.437Z"
+  "lastUpdated": "2026-05-08T07:49:02.000Z"
 }
