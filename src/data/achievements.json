@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 1267,
+      "name": "The Riddle of Steel VI",
+      "obtained": "2026-05-09T06:28:03.000Z",
+      "timestamp": 1778308083
+    },
+    {
+      "id": 1266,
+      "name": "Temper, Temper VI",
+      "obtained": "2026-05-09T06:28:03.000Z",
+      "timestamp": 1778308083
+    },
+    {
       "id": 97,
       "name": "Mastering the Hand I",
       "obtained": "2026-05-08T23:34:48.000Z",
@@ -7309,5 +7321,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-09T03:33:03.939Z"
+  "lastUpdated": "2026-05-09T08:03:13.578Z"
 }
