@@ -1,6 +1,42 @@
 {
   "achievements": [
     {
+      "id": 97,
+      "name": "Mastering the Hand I",
+      "obtained": "2026-05-08T23:34:48.000Z",
+      "timestamp": 1778283288
+    },
+    {
+      "id": 96,
+      "name": "All in Good Taste V",
+      "obtained": "2026-05-08T23:34:48.000Z",
+      "timestamp": 1778283288
+    },
+    {
+      "id": 91,
+      "name": "'Tis True without Lying V",
+      "obtained": "2026-05-08T23:34:48.000Z",
+      "timestamp": 1778283288
+    },
+    {
+      "id": 81,
+      "name": "Tougher than Leather V",
+      "obtained": "2026-05-08T23:34:48.000Z",
+      "timestamp": 1778283288
+    },
+    {
+      "id": 76,
+      "name": "Heart of Gold V",
+      "obtained": "2026-05-08T23:34:48.000Z",
+      "timestamp": 1778283288
+    },
+    {
+      "id": 71,
+      "name": "The Riddle of Steel V",
+      "obtained": "2026-05-08T23:34:48.000Z",
+      "timestamp": 1778283288
+    },
+    {
       "id": 720,
       "name": "I Found That: Miner II",
       "obtained": "2026-05-08T05:17:13.000Z",
@@ -7273,5 +7309,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-08T19:26:55.220Z"
+  "lastUpdated": "2026-05-09T03:33:03.939Z"
 }
