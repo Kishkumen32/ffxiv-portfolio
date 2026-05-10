@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 2183,
+      "name": "Satisfaction Guaranteed: Adkiragh I",
+      "obtained": "2026-05-10T18:17:08.000Z",
+      "timestamp": 1778437028
+    },
+    {
+      "id": 1776,
+      "name": "Satisfaction Guaranteed: Zhloe Aliapoh III",
+      "obtained": "2026-05-10T18:17:08.000Z",
+      "timestamp": 1778437028
+    },
+    {
       "id": 3979,
       "name": "Nothing Out of Nothing",
       "obtained": "2026-05-10T03:30:15.000Z",
@@ -7363,5 +7375,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-10T13:40:06.673Z"
+  "lastUpdated": "2026-05-10T19:12:57.134Z"
 }
