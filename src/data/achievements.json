@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 753,
+      "name": "An Eye for Detail: Blacksmith I",
+      "obtained": "2026-05-11T04:49:24.000Z",
+      "timestamp": 1778474964
+    },
+    {
       "id": 2183,
       "name": "Satisfaction Guaranteed: Adkiragh I",
       "obtained": "2026-05-10T18:17:08.000Z",
@@ -7375,5 +7381,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-11T03:58:58.533Z"
+  "lastUpdated": "2026-05-11T09:51:17.786Z"
 }
