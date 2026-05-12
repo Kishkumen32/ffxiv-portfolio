@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 775,
+      "name": "An Eye for Quantity: Miner II",
+      "obtained": "2026-05-12T02:58:58.000Z",
+      "timestamp": 1778554738
+    },
+    {
+      "id": 723,
+      "name": "I Found That: Botanist II",
+      "obtained": "2026-05-12T02:58:58.000Z",
+      "timestamp": 1778554738
+    },
+    {
       "id": 753,
       "name": "An Eye for Detail: Blacksmith I",
       "obtained": "2026-05-11T04:49:24.000Z",
@@ -7381,5 +7393,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-11T19:55:34.874Z"
+  "lastUpdated": "2026-05-12T03:41:58.661Z"
 }
