@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 2835,
+      "name": "Satisfaction Guaranteed: Charlemend I",
+      "obtained": "2026-05-14T05:25:05.000Z",
+      "timestamp": 1778736305
+    },
+    {
       "id": 775,
       "name": "An Eye for Quantity: Miner II",
       "obtained": "2026-05-12T02:58:58.000Z",
@@ -7393,5 +7399,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-14T03:51:32.076Z"
+  "lastUpdated": "2026-05-14T08:45:07.536Z"
 }
