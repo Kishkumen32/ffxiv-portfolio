@@ -1,6 +1,30 @@
 {
   "achievements": [
     {
+      "id": 768,
+      "name": "An Eye for Detail: Alchemist I",
+      "obtained": "2026-05-16T18:20:00.000Z",
+      "timestamp": 1778955600
+    },
+    {
+      "id": 716,
+      "name": "I Made That: Culinarian I",
+      "obtained": "2026-05-16T18:20:00.000Z",
+      "timestamp": 1778955600
+    },
+    {
+      "id": 316,
+      "name": "Tales of the Hand",
+      "obtained": "2026-05-16T18:20:00.000Z",
+      "timestamp": 1778955600
+    },
+    {
+      "id": 713,
+      "name": "I Made That: Alchemist I",
+      "obtained": "2026-05-16T15:05:46.000Z",
+      "timestamp": 1778943946
+    },
+    {
       "id": 778,
       "name": "An Eye for Quantity: Botanist II",
       "obtained": "2026-05-16T02:32:45.000Z",
@@ -7423,5 +7447,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-16T13:43:02.676Z"
+  "lastUpdated": "2026-05-16T19:12:48.948Z"
 }
