@@ -1,6 +1,30 @@
 {
   "achievements": [
     {
+      "id": 778,
+      "name": "An Eye for Quantity: Botanist II",
+      "obtained": "2026-05-16T02:32:45.000Z",
+      "timestamp": 1778898765
+    },
+    {
+      "id": 765,
+      "name": "An Eye for Detail: Weaver I",
+      "obtained": "2026-05-16T02:32:45.000Z",
+      "timestamp": 1778898765
+    },
+    {
+      "id": 759,
+      "name": "An Eye for Detail: Goldsmith I",
+      "obtained": "2026-05-16T02:32:45.000Z",
+      "timestamp": 1778898765
+    },
+    {
+      "id": 721,
+      "name": "I Found That: Miner III",
+      "obtained": "2026-05-16T02:32:45.000Z",
+      "timestamp": 1778898765
+    },
+    {
       "id": 2835,
       "name": "Satisfaction Guaranteed: Charlemend I",
       "obtained": "2026-05-14T05:25:05.000Z",
@@ -7399,5 +7423,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-15T19:46:08.500Z"
+  "lastUpdated": "2026-05-16T03:36:59.534Z"
 }
