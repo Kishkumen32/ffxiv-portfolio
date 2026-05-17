@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 1836,
+      "name": "Temper, Temper VII",
+      "obtained": "2026-05-17T00:37:10.000Z",
+      "timestamp": 1778978230
+    },
+    {
+      "id": 1835,
+      "name": "Knock on Wood VII",
+      "obtained": "2026-05-17T00:37:10.000Z",
+      "timestamp": 1778978230
+    },
+    {
       "id": 768,
       "name": "An Eye for Detail: Alchemist I",
       "obtained": "2026-05-16T18:20:00.000Z",
@@ -7447,5 +7459,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-16T19:12:48.948Z"
+  "lastUpdated": "2026-05-17T03:55:33.404Z"
 }
