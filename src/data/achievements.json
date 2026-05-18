@@ -1,6 +1,72 @@
 {
   "achievements": [
     {
+      "id": 2267,
+      "name": "Heart of Gold VIII",
+      "obtained": "2026-05-18T02:49:30.000Z",
+      "timestamp": 1779072570
+    },
+    {
+      "id": 2266,
+      "name": "The Riddle of Steel VIII",
+      "obtained": "2026-05-18T02:49:30.000Z",
+      "timestamp": 1779072570
+    },
+    {
+      "id": 2265,
+      "name": "Temper, Temper VIII",
+      "obtained": "2026-05-18T02:49:30.000Z",
+      "timestamp": 1779072570
+    },
+    {
+      "id": 2264,
+      "name": "Knock on Wood VIII",
+      "obtained": "2026-05-17T20:32:21.000Z",
+      "timestamp": 1779049941
+    },
+    {
+      "id": 1846,
+      "name": "Mastering the Hand III",
+      "obtained": "2026-05-17T20:32:21.000Z",
+      "timestamp": 1779049941
+    },
+    {
+      "id": 1842,
+      "name": "All in Good Taste VII",
+      "obtained": "2026-05-17T20:32:21.000Z",
+      "timestamp": 1779049941
+    },
+    {
+      "id": 1841,
+      "name": "'Tis True without Lying VII",
+      "obtained": "2026-05-17T20:32:21.000Z",
+      "timestamp": 1779049941
+    },
+    {
+      "id": 1840,
+      "name": "Smiling, Styling, and Textiling VII",
+      "obtained": "2026-05-17T20:32:21.000Z",
+      "timestamp": 1779049941
+    },
+    {
+      "id": 1839,
+      "name": "Tougher than Leather VII",
+      "obtained": "2026-05-17T20:32:21.000Z",
+      "timestamp": 1779049941
+    },
+    {
+      "id": 1838,
+      "name": "Heart of Gold VII",
+      "obtained": "2026-05-17T20:32:21.000Z",
+      "timestamp": 1779049941
+    },
+    {
+      "id": 1837,
+      "name": "The Riddle of Steel VII",
+      "obtained": "2026-05-17T20:32:21.000Z",
+      "timestamp": 1779049941
+    },
+    {
       "id": 1836,
       "name": "Temper, Temper VII",
       "obtained": "2026-05-17T00:37:10.000Z",
@@ -7459,5 +7525,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-17T19:16:34.734Z"
+  "lastUpdated": "2026-05-18T04:07:54.091Z"
 }
