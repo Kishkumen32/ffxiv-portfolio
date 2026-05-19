@@ -1,6 +1,54 @@
 {
   "achievements": [
     {
+      "id": 2913,
+      "name": "Temper, Temper IX",
+      "obtained": "2026-05-19T05:27:26.000Z",
+      "timestamp": 1779168446
+    },
+    {
+      "id": 2912,
+      "name": "Knock on Wood IX",
+      "obtained": "2026-05-19T05:27:26.000Z",
+      "timestamp": 1779168446
+    },
+    {
+      "id": 2278,
+      "name": "Mastering the Hand IV",
+      "obtained": "2026-05-19T05:27:26.000Z",
+      "timestamp": 1779168446
+    },
+    {
+      "id": 2271,
+      "name": "All in Good Taste VIII",
+      "obtained": "2026-05-19T05:27:26.000Z",
+      "timestamp": 1779168446
+    },
+    {
+      "id": 2270,
+      "name": "'Tis True without Lying VIII",
+      "obtained": "2026-05-19T05:27:26.000Z",
+      "timestamp": 1779168446
+    },
+    {
+      "id": 2269,
+      "name": "Smiling, Styling, and Textiling VIII",
+      "obtained": "2026-05-19T05:27:26.000Z",
+      "timestamp": 1779168446
+    },
+    {
+      "id": 2268,
+      "name": "Tougher than Leather VIII",
+      "obtained": "2026-05-19T05:27:26.000Z",
+      "timestamp": 1779168446
+    },
+    {
+      "id": 309,
+      "name": "Living in a Materia World",
+      "obtained": "2026-05-19T05:27:26.000Z",
+      "timestamp": 1779168446
+    },
+    {
       "id": 2267,
       "name": "Heart of Gold VIII",
       "obtained": "2026-05-18T02:49:30.000Z",
@@ -7525,5 +7573,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-19T04:01:11.161Z"
+  "lastUpdated": "2026-05-19T09:56:16.781Z"
 }
