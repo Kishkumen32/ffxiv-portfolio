@@ -1,6 +1,36 @@
 {
   "achievements": [
     {
+      "id": 2926,
+      "name": "Mastering the Hand V",
+      "obtained": "2026-05-21T02:09:12.000Z",
+      "timestamp": 1779329352
+    },
+    {
+      "id": 2919,
+      "name": "All in Good Taste IX",
+      "obtained": "2026-05-21T02:09:12.000Z",
+      "timestamp": 1779329352
+    },
+    {
+      "id": 2918,
+      "name": "'Tis True without Lying IX",
+      "obtained": "2026-05-21T02:09:12.000Z",
+      "timestamp": 1779329352
+    },
+    {
+      "id": 2917,
+      "name": "Smiling, Styling, and Textiling IX",
+      "obtained": "2026-05-21T02:09:12.000Z",
+      "timestamp": 1779329352
+    },
+    {
+      "id": 2916,
+      "name": "Tougher than Leather IX",
+      "obtained": "2026-05-21T02:09:12.000Z",
+      "timestamp": 1779329352
+    },
+    {
       "id": 2915,
       "name": "Heart of Gold IX",
       "obtained": "2026-05-20T04:11:00.000Z",
@@ -7585,5 +7615,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-20T20:24:20.714Z"
+  "lastUpdated": "2026-05-21T04:11:29.795Z"
 }
