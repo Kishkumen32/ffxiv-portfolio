@@ -1,6 +1,24 @@
 {
   "achievements": [
     {
+      "id": 1290,
+      "name": "I Made That (Worth Collecting) II",
+      "obtained": "2026-05-21T07:04:14.000Z",
+      "timestamp": 1779347054
+    },
+    {
+      "id": 771,
+      "name": "An Eye for Detail: Culinarian I",
+      "obtained": "2026-05-21T07:04:14.000Z",
+      "timestamp": 1779347054
+    },
+    {
+      "id": 750,
+      "name": "An Eye for Detail: Carpenter I",
+      "obtained": "2026-05-21T07:04:14.000Z",
+      "timestamp": 1779347054
+    },
+    {
       "id": 2926,
       "name": "Mastering the Hand V",
       "obtained": "2026-05-21T02:09:12.000Z",
@@ -7615,5 +7633,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-21T04:11:29.795Z"
+  "lastUpdated": "2026-05-21T09:52:26.652Z"
 }
