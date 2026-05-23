@@ -1,6 +1,24 @@
 {
   "achievements": [
     {
+      "id": 3506,
+      "name": "Worth the Squeeze",
+      "obtained": "2026-05-22T20:47:47.000Z",
+      "timestamp": 1779482867
+    },
+    {
+      "id": 3457,
+      "name": "'Tis True without Lying X",
+      "obtained": "2026-05-22T20:47:47.000Z",
+      "timestamp": 1779482867
+    },
+    {
+      "id": 762,
+      "name": "An Eye for Detail: Leatherworker I",
+      "obtained": "2026-05-22T20:47:47.000Z",
+      "timestamp": 1779482867
+    },
+    {
       "id": 3458,
       "name": "All in Good Taste X",
       "obtained": "2026-05-22T15:04:36.000Z",
@@ -7639,5 +7657,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-22T19:54:59.487Z"
+  "lastUpdated": "2026-05-23T03:43:01.798Z"
 }
