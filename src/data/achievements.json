@@ -1,6 +1,36 @@
 {
   "achievements": [
     {
+      "id": 3460,
+      "name": "Breaking Rocks in the Hot Sun X",
+      "obtained": "2026-05-24T07:20:48.000Z",
+      "timestamp": 1779607248
+    },
+    {
+      "id": 3459,
+      "name": "Fear the Reaper X",
+      "obtained": "2026-05-24T07:20:48.000Z",
+      "timestamp": 1779607248
+    },
+    {
+      "id": 3455,
+      "name": "Tougher than Leather X",
+      "obtained": "2026-05-24T07:20:48.000Z",
+      "timestamp": 1779607248
+    },
+    {
+      "id": 695,
+      "name": "I Made That: Carpenter I",
+      "obtained": "2026-05-24T07:20:48.000Z",
+      "timestamp": 1779607248
+    },
+    {
+      "id": 297,
+      "name": "Getting Too Attached II",
+      "obtained": "2026-05-24T07:20:48.000Z",
+      "timestamp": 1779607248
+    },
+    {
       "id": 3456,
       "name": "Smiling, Styling, and Textiling X",
       "obtained": "2026-05-23T20:32:20.000Z",
@@ -7669,5 +7699,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-24T04:04:56.221Z"
+  "lastUpdated": "2026-05-24T08:36:10.280Z"
 }
