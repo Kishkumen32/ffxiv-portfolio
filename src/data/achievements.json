@@ -1,6 +1,30 @@
 {
   "achievements": [
     {
+      "id": 3454,
+      "name": "Heart of Gold X",
+      "obtained": "2026-05-24T17:41:39.000Z",
+      "timestamp": 1779644499
+    },
+    {
+      "id": 3453,
+      "name": "The Riddle of Steel X",
+      "obtained": "2026-05-24T17:41:39.000Z",
+      "timestamp": 1779644499
+    },
+    {
+      "id": 3452,
+      "name": "Temper, Temper X",
+      "obtained": "2026-05-24T17:41:39.000Z",
+      "timestamp": 1779644499
+    },
+    {
+      "id": 3740,
+      "name": "Just One More Spin I",
+      "obtained": "2026-05-24T15:04:46.000Z",
+      "timestamp": 1779635086
+    },
+    {
       "id": 3460,
       "name": "Breaking Rocks in the Hot Sun X",
       "obtained": "2026-05-24T07:20:48.000Z",
@@ -7699,5 +7723,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-24T13:46:10.682Z"
+  "lastUpdated": "2026-05-24T19:24:09.837Z"
 }
