@@ -1,6 +1,48 @@
 {
   "achievements": [
     {
+      "id": 3465,
+      "name": "Mastering the Hand VI",
+      "obtained": "2026-05-25T01:06:11.000Z",
+      "timestamp": 1779671171
+    },
+    {
+      "id": 3451,
+      "name": "Knock on Wood X",
+      "obtained": "2026-05-25T01:06:11.000Z",
+      "timestamp": 1779671171
+    },
+    {
+      "id": 1295,
+      "name": "I Traded That I",
+      "obtained": "2026-05-25T01:06:11.000Z",
+      "timestamp": 1779671171
+    },
+    {
+      "id": 724,
+      "name": "I Found That: Botanist III",
+      "obtained": "2026-05-25T01:06:11.000Z",
+      "timestamp": 1779671171
+    },
+    {
+      "id": 113,
+      "name": "Mastering the Land I",
+      "obtained": "2026-05-25T01:06:11.000Z",
+      "timestamp": 1779671171
+    },
+    {
+      "id": 112,
+      "name": "Gone Fishin' V",
+      "obtained": "2026-05-25T01:06:11.000Z",
+      "timestamp": 1779671171
+    },
+    {
+      "id": 111,
+      "name": "Gone Fishin' IV",
+      "obtained": "2026-05-25T01:06:11.000Z",
+      "timestamp": 1779671171
+    },
+    {
       "id": 3454,
       "name": "Heart of Gold X",
       "obtained": "2026-05-24T17:41:39.000Z",
@@ -7723,5 +7765,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-24T19:24:09.837Z"
+  "lastUpdated": "2026-05-25T04:16:50.515Z"
 }
