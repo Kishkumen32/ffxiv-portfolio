@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 318,
+      "name": "The Greatest Tales Ever Told",
+      "obtained": "2026-05-25T22:30:48.000Z",
+      "timestamp": 1779748248
+    },
+    {
+      "id": 317,
+      "name": "Tales of the Land",
+      "obtained": "2026-05-25T22:30:48.000Z",
+      "timestamp": 1779748248
+    },
+    {
       "id": 3465,
       "name": "Mastering the Hand VI",
       "obtained": "2026-05-25T01:06:11.000Z",
@@ -7765,5 +7777,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-25T19:49:07.202Z"
+  "lastUpdated": "2026-05-26T04:02:09.131Z"
 }
