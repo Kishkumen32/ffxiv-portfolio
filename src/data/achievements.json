@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3188,
+      "name": "Way to Go I",
+      "obtained": "2026-05-26T21:14:07.000Z",
+      "timestamp": 1779830047
+    },
+    {
       "id": 318,
       "name": "The Greatest Tales Ever Told",
       "obtained": "2026-05-25T22:30:48.000Z",
@@ -7777,5 +7783,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-05-26T20:15:52.627Z"
+  "lastUpdated": "2026-05-27T04:16:15.302Z"
 }
