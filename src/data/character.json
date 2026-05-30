@@ -23,6 +23,42 @@
   },
   "activity": [
     {
+      "id": "63caDL7A4YxByqkH:88",
+      "encounter_name": "Red Hot and Deep Blue",
+      "fight_name": "Red Hot and Deep Blue",
+      "name": "Red Hot and Deep Blue",
+      "classification": "Battle",
+      "start": "2026-05-30T04:02:45.763Z",
+      "end": "2026-05-30T04:09:25.840Z",
+      "duration": 400,
+      "kill": false,
+      "cleared": false,
+      "drops": [],
+      "party": 8,
+      "job": "Dragoon",
+      "fight": 102,
+      "date": "2026-05-30",
+      "percentile": null
+    },
+    {
+      "id": "63caDL7A4YxByqkH:87",
+      "encounter_name": "Red Hot and Deep Blue",
+      "fight_name": "Red Hot and Deep Blue",
+      "name": "Red Hot and Deep Blue",
+      "classification": "Battle",
+      "start": "2026-05-30T03:52:28.888Z",
+      "end": "2026-05-30T04:01:51.507Z",
+      "duration": 563,
+      "kill": false,
+      "cleared": false,
+      "drops": [],
+      "party": 8,
+      "job": "Dragoon",
+      "fight": 102,
+      "date": "2026-05-30",
+      "percentile": null
+    },
+    {
       "id": "63caDL7A4YxByqkH:86",
       "encounter_name": "Red Hot and Deep Blue",
       "fight_name": "Red Hot and Deep Blue",
@@ -4975,5 +5011,5 @@
   ],
   "progression": [],
   "fflogs": null,
-  "lastUpdated": "2026-05-30T03:53:28.676Z"
+  "lastUpdated": "2026-05-30T08:33:58.849Z"
 }
