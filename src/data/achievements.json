@@ -1,6 +1,30 @@
 {
   "achievements": [
     {
+      "id": 1881,
+      "name": "Mapping the Realm: Yanxia",
+      "obtained": "2026-06-02T01:03:51.000Z",
+      "timestamp": 1780362231
+    },
+    {
+      "id": 1847,
+      "name": "Mastering the Land III",
+      "obtained": "2026-06-02T01:03:51.000Z",
+      "timestamp": 1780362231
+    },
+    {
+      "id": 1845,
+      "name": "Gone Fishin' VII",
+      "obtained": "2026-06-02T01:03:51.000Z",
+      "timestamp": 1780362231
+    },
+    {
+      "id": 780,
+      "name": "The One That Didn't Get Away I",
+      "obtained": "2026-06-02T01:03:51.000Z",
+      "timestamp": 1780362231
+    },
+    {
       "id": 1292,
       "name": "I Collected That I",
       "obtained": "2026-05-30T18:42:06.000Z",
@@ -7807,5 +7831,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-01T21:39:03.000Z"
+  "lastUpdated": "2026-06-02T04:26:00.278Z"
 }
