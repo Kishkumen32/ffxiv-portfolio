@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 2279,
+      "name": "Mastering the Land IV",
+      "obtained": "2026-06-09T00:11:36.000Z",
+      "timestamp": 1780963896
+    },
+    {
+      "id": 2274,
+      "name": "Gone Fishin' VIII",
+      "obtained": "2026-06-09T00:11:36.000Z",
+      "timestamp": 1780963896
+    },
+    {
       "id": 1881,
       "name": "Mapping the Realm: Yanxia",
       "obtained": "2026-06-02T01:03:51.000Z",
@@ -7831,5 +7843,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-08T20:25:08.038Z"
+  "lastUpdated": "2026-06-09T03:59:11.378Z"
 }
