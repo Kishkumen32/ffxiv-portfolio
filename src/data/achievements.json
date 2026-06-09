@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 3987,
+      "name": "Satisfaction Guaranteed: Aunt Tii's Tacos II",
+      "obtained": "2026-06-09T04:51:00.000Z",
+      "timestamp": 1780980660
+    },
+    {
+      "id": 3986,
+      "name": "Satisfaction Guaranteed: Aunt Tii's Tacos I",
+      "obtained": "2026-06-09T04:51:00.000Z",
+      "timestamp": 1780980660
+    },
+    {
       "id": 2279,
       "name": "Mastering the Land IV",
       "obtained": "2026-06-09T00:11:36.000Z",
@@ -7843,5 +7855,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-09T03:59:11.378Z"
+  "lastUpdated": "2026-06-09T09:58:07.647Z"
 }
