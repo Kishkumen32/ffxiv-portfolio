@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 2927,
+      "name": "Mastering the Land V",
+      "obtained": "2026-06-13T01:11:57.000Z",
+      "timestamp": 1781313117
+    },
+    {
+      "id": 2922,
+      "name": "Gone Fishin' IX",
+      "obtained": "2026-06-13T01:11:57.000Z",
+      "timestamp": 1781313117
+    },
+    {
       "id": 3987,
       "name": "Satisfaction Guaranteed: Aunt Tii's Tacos II",
       "obtained": "2026-06-09T04:51:00.000Z",
@@ -7855,5 +7867,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-12T20:17:16.394Z"
+  "lastUpdated": "2026-06-13T04:14:58.315Z"
 }
