@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 3466,
+      "name": "Mastering the Land VI",
+      "obtained": "2026-06-13T05:17:13.000Z",
+      "timestamp": 1781327833
+    },
+    {
+      "id": 3461,
+      "name": "Gone Fishin' X",
+      "obtained": "2026-06-13T05:17:13.000Z",
+      "timestamp": 1781327833
+    },
+    {
       "id": 2927,
       "name": "Mastering the Land V",
       "obtained": "2026-06-13T01:11:57.000Z",
@@ -7867,5 +7879,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-13T04:14:58.315Z"
+  "lastUpdated": "2026-06-13T09:23:57.539Z"
 }
