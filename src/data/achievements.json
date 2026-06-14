@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 298,
+      "name": "Getting Too Attached III",
+      "obtained": "2026-06-14T02:11:47.000Z",
+      "timestamp": 1781403107
+    },
+    {
       "id": 3466,
       "name": "Mastering the Land VI",
       "obtained": "2026-06-13T05:17:13.000Z",
@@ -7879,5 +7885,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-13T19:43:51.099Z"
+  "lastUpdated": "2026-06-14T04:42:39.413Z"
 }
