@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3799,
+      "name": "R&D: Stellar Frypan",
+      "obtained": "2026-06-20T19:16:46.000Z",
+      "timestamp": 1781983006
+    },
+    {
       "id": 3698,
       "name": "R&D: Cosmic Frypan",
       "obtained": "2026-06-20T01:04:21.000Z",
@@ -7903,5 +7909,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-20T14:14:24.370Z"
+  "lastUpdated": "2026-06-20T19:44:16.227Z"
 }
