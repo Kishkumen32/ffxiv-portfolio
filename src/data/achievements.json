@@ -1,6 +1,42 @@
 {
   "achievements": [
     {
+      "id": 3883,
+      "name": "R&D: Hyperalembic",
+      "obtained": "2026-06-21T19:16:02.000Z",
+      "timestamp": 1782069362
+    },
+    {
+      "id": 3798,
+      "name": "R&D: Stellar Alembic",
+      "obtained": "2026-06-21T19:16:02.000Z",
+      "timestamp": 1782069362
+    },
+    {
+      "id": 3697,
+      "name": "R&D: Cosmic Alembic",
+      "obtained": "2026-06-21T19:16:02.000Z",
+      "timestamp": 1782069362
+    },
+    {
+      "id": 1291,
+      "name": "I Made That (Worth Collecting) III",
+      "obtained": "2026-06-21T19:16:02.000Z",
+      "timestamp": 1782069362
+    },
+    {
+      "id": 769,
+      "name": "An Eye for Detail: Alchemist II",
+      "obtained": "2026-06-21T19:16:02.000Z",
+      "timestamp": 1782069362
+    },
+    {
+      "id": 3935,
+      "name": "Witness to the Stars",
+      "obtained": "2026-06-21T15:04:30.000Z",
+      "timestamp": 1782054270
+    },
+    {
       "id": 3925,
       "name": "The Outer Researches",
       "obtained": "2026-06-21T05:31:40.000Z",
@@ -7927,5 +7963,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-21T14:21:42.893Z"
+  "lastUpdated": "2026-06-21T19:51:12.227Z"
 }
