@@ -1,6 +1,24 @@
 {
   "achievements": [
     {
+      "id": 3925,
+      "name": "The Outer Researches",
+      "obtained": "2026-06-21T05:31:40.000Z",
+      "timestamp": 1782019900
+    },
+    {
+      "id": 3921,
+      "name": "R&D: Frypan of Stars",
+      "obtained": "2026-06-21T05:31:40.000Z",
+      "timestamp": 1782019900
+    },
+    {
+      "id": 3884,
+      "name": "R&D: Hyperfrypan",
+      "obtained": "2026-06-21T05:31:40.000Z",
+      "timestamp": 1782019900
+    },
+    {
       "id": 3799,
       "name": "R&D: Stellar Frypan",
       "obtained": "2026-06-20T19:16:46.000Z",
@@ -7909,5 +7927,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-21T04:49:43.051Z"
+  "lastUpdated": "2026-06-21T09:57:24.167Z"
 }
