@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 3920,
+      "name": "R&D: Alembic of Stars",
+      "obtained": "2026-06-22T18:25:19.000Z",
+      "timestamp": 1782152719
+    },
+    {
+      "id": 3693,
+      "name": "R&D: Cosmic Raising Hammer",
+      "obtained": "2026-06-22T18:25:19.000Z",
+      "timestamp": 1782152719
+    },
+    {
       "id": 3883,
       "name": "R&D: Hyperalembic",
       "obtained": "2026-06-21T19:16:02.000Z",
@@ -7963,5 +7975,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-22T12:13:53.215Z"
+  "lastUpdated": "2026-06-22T20:54:42.164Z"
 }
