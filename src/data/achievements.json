@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 3916,
+      "name": "R&D: Raising Hammer of Stars",
+      "obtained": "2026-06-23T05:00:47.000Z",
+      "timestamp": 1782190847
+    },
+    {
+      "id": 3879,
+      "name": "R&D: Raising Hyperhammer",
+      "obtained": "2026-06-23T05:00:47.000Z",
+      "timestamp": 1782190847
+    },
+    {
       "id": 3794,
       "name": "R&D: Stellar Raising Hammer",
       "obtained": "2026-06-23T00:25:26.000Z",
@@ -7987,5 +7999,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-23T03:59:03.120Z"
+  "lastUpdated": "2026-06-23T09:51:57.614Z"
 }
