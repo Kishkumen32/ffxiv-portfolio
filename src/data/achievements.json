@@ -1,6 +1,18 @@
 {
   "achievements": [
     {
+      "id": 3794,
+      "name": "R&D: Stellar Raising Hammer",
+      "obtained": "2026-06-23T00:25:26.000Z",
+      "timestamp": 1782174326
+    },
+    {
+      "id": 756,
+      "name": "An Eye for Detail: Armorer I",
+      "obtained": "2026-06-23T00:25:26.000Z",
+      "timestamp": 1782174326
+    },
+    {
       "id": 3920,
       "name": "R&D: Alembic of Stars",
       "obtained": "2026-06-22T18:25:19.000Z",
@@ -7975,5 +7987,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-22T20:54:42.164Z"
+  "lastUpdated": "2026-06-23T03:59:03.120Z"
 }
