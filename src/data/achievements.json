@@ -1,6 +1,36 @@
 {
   "achievements": [
     {
+      "id": 3919,
+      "name": "R&D: Needle of Stars",
+      "obtained": "2026-06-24T04:31:29.000Z",
+      "timestamp": 1782275489
+    },
+    {
+      "id": 3882,
+      "name": "R&D: Hyperneedle",
+      "obtained": "2026-06-24T04:31:29.000Z",
+      "timestamp": 1782275489
+    },
+    {
+      "id": 3797,
+      "name": "R&D: Stellar Needle",
+      "obtained": "2026-06-24T04:31:29.000Z",
+      "timestamp": 1782275489
+    },
+    {
+      "id": 3696,
+      "name": "R&D: Cosmic Needle",
+      "obtained": "2026-06-24T04:31:29.000Z",
+      "timestamp": 1782275489
+    },
+    {
+      "id": 766,
+      "name": "An Eye for Detail: Weaver II",
+      "obtained": "2026-06-24T04:31:29.000Z",
+      "timestamp": 1782275489
+    },
+    {
       "id": 3916,
       "name": "R&D: Raising Hammer of Stars",
       "obtained": "2026-06-23T05:00:47.000Z",
@@ -7999,5 +8029,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-24T04:00:51.852Z"
+  "lastUpdated": "2026-06-24T09:39:33.930Z"
 }
