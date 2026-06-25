@@ -1,6 +1,30 @@
 {
   "achievements": [
     {
+      "id": 3918,
+      "name": "R&D: Round Knife of Stars",
+      "obtained": "2026-06-25T01:56:52.000Z",
+      "timestamp": 1782352612
+    },
+    {
+      "id": 3881,
+      "name": "R&D: Round Hyperknife",
+      "obtained": "2026-06-25T01:56:52.000Z",
+      "timestamp": 1782352612
+    },
+    {
+      "id": 3796,
+      "name": "R&D: Stellar Round Knife",
+      "obtained": "2026-06-25T01:56:52.000Z",
+      "timestamp": 1782352612
+    },
+    {
+      "id": 3695,
+      "name": "R&D: Cosmic Round Knife",
+      "obtained": "2026-06-25T01:56:52.000Z",
+      "timestamp": 1782352612
+    },
+    {
       "id": 3919,
       "name": "R&D: Needle of Stars",
       "obtained": "2026-06-24T04:31:29.000Z",
@@ -8029,5 +8053,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-06-24T19:53:07.686Z"
+  "lastUpdated": "2026-06-25T04:01:28.310Z"
 }
