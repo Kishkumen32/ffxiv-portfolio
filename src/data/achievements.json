@@ -1,6 +1,42 @@
 {
   "achievements": [
     {
+      "id": 3917,
+      "name": "R&D: Mallet of Stars",
+      "obtained": "2026-07-02T22:23:24.000Z",
+      "timestamp": 1783031004
+    },
+    {
+      "id": 3914,
+      "name": "R&D: Saw of Stars",
+      "obtained": "2026-07-02T22:23:24.000Z",
+      "timestamp": 1783031004
+    },
+    {
+      "id": 3880,
+      "name": "R&D: Hypermallet",
+      "obtained": "2026-07-02T22:23:24.000Z",
+      "timestamp": 1783031004
+    },
+    {
+      "id": 3877,
+      "name": "R&D: Hypersaw",
+      "obtained": "2026-07-02T22:23:24.000Z",
+      "timestamp": 1783031004
+    },
+    {
+      "id": 3795,
+      "name": "R&D: Stellar Mallet",
+      "obtained": "2026-07-02T22:23:24.000Z",
+      "timestamp": 1783031004
+    },
+    {
+      "id": 3694,
+      "name": "R&D: Cosmic Mallet",
+      "obtained": "2026-07-02T22:23:24.000Z",
+      "timestamp": 1783031004
+    },
+    {
       "id": 3792,
       "name": "R&D: Stellar Saw",
       "obtained": "2026-07-02T15:03:13.000Z",
@@ -8065,5 +8101,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-02T19:38:44.220Z"
+  "lastUpdated": "2026-07-03T03:42:24.970Z"
 }
