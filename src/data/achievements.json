@@ -1,6 +1,78 @@
 {
   "achievements": [
     {
+      "id": 3923,
+      "name": "R&D: Hatchet of Stars",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3922,
+      "name": "R&D: Pickaxe of Stars",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3915,
+      "name": "R&D: Cross-pein Hammer of Stars",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3886,
+      "name": "R&D: Hyperhatchet",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3885,
+      "name": "R&D: Hyperpickaxe",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3878,
+      "name": "R&D: Cross-pein Hyperhammer",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3801,
+      "name": "R&D: Stellar Hatchet",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3800,
+      "name": "R&D: Stellar Pickaxe",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3741,
+      "name": "Just One More Spin II",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3700,
+      "name": "R&D: Cosmic Hatchet",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 3699,
+      "name": "R&D: Cosmic Pickaxe",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
+      "id": 1293,
+      "name": "I Collected That II",
+      "obtained": "2026-07-04T06:27:29.000Z",
+      "timestamp": 1783146449
+    },
+    {
       "id": 3793,
       "name": "R&D: Stellar Cross-pein Hammer",
       "obtained": "2026-07-03T07:55:56.000Z",
@@ -8113,5 +8185,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-04T03:35:47.693Z"
+  "lastUpdated": "2026-07-04T08:44:22.863Z"
 }
