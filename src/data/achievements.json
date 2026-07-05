@@ -1,6 +1,24 @@
 {
   "achievements": [
     {
+      "id": 3802,
+      "name": "R&D: Stellar Fishing Rod",
+      "obtained": "2026-07-04T20:18:05.000Z",
+      "timestamp": 1783196285
+    },
+    {
+      "id": 3701,
+      "name": "R&D: Cosmic Fishing Rod",
+      "obtained": "2026-07-04T20:18:05.000Z",
+      "timestamp": 1783196285
+    },
+    {
+      "id": 781,
+      "name": "The One That Didn't Get Away II",
+      "obtained": "2026-07-04T20:18:05.000Z",
+      "timestamp": 1783196285
+    },
+    {
       "id": 3923,
       "name": "R&D: Hatchet of Stars",
       "obtained": "2026-07-04T06:27:29.000Z",
@@ -8185,5 +8203,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-04T19:21:49.619Z"
+  "lastUpdated": "2026-07-05T03:54:04.355Z"
 }
