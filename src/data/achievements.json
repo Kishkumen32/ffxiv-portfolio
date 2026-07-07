@@ -1,6 +1,24 @@
 {
   "achievements": [
     {
+      "id": 304,
+      "name": "I Got This!",
+      "obtained": "2026-07-07T05:18:41.000Z",
+      "timestamp": 1783401521
+    },
+    {
+      "id": 303,
+      "name": "Luck's Got Nothing to Do with It",
+      "obtained": "2026-07-07T05:18:41.000Z",
+      "timestamp": 1783401521
+    },
+    {
+      "id": 302,
+      "name": "I Make My Own Luck",
+      "obtained": "2026-07-07T05:18:41.000Z",
+      "timestamp": 1783401521
+    },
+    {
       "id": 3474,
       "name": "Savoring the Realm: Exemplar",
       "obtained": "2026-07-06T23:20:18.000Z",
@@ -8227,5 +8245,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-07T03:51:54.279Z"
+  "lastUpdated": "2026-07-07T09:51:24.429Z"
 }
