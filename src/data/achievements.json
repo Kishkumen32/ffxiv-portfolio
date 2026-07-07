@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3474,
+      "name": "Savoring the Realm: Exemplar",
+      "obtained": "2026-07-06T23:20:18.000Z",
+      "timestamp": 1783380018
+    },
+    {
       "id": 3597,
       "name": "The Customer Is Always Right: Nitowikwe I",
       "obtained": "2026-07-06T15:03:30.000Z",
@@ -8221,5 +8227,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-06T20:05:21.518Z"
+  "lastUpdated": "2026-07-07T03:51:54.279Z"
 }
