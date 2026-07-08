@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3475,
+      "name": "Reaping Dawntrail",
+      "obtained": "2026-07-08T03:50:25.000Z",
+      "timestamp": 1783482625
+    },
+    {
       "id": 304,
       "name": "I Got This!",
       "obtained": "2026-07-07T05:18:41.000Z",
@@ -8245,5 +8251,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-08T03:19:08.711Z"
+  "lastUpdated": "2026-07-08T08:36:34.576Z"
 }
