@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3988,
+      "name": "Satisfaction Guaranteed: Aunt Tii's Tacos III",
+      "obtained": "2026-07-12T00:10:57.000Z",
+      "timestamp": 1783815057
+    },
+    {
       "id": 3475,
       "name": "Reaping Dawntrail",
       "obtained": "2026-07-08T03:50:25.000Z",
@@ -8251,5 +8257,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-11T19:11:20.819Z"
+  "lastUpdated": "2026-07-12T03:24:48.953Z"
 }
