@@ -1,6 +1,36 @@
 {
   "achievements": [
     {
+      "id": 2968,
+      "name": "Winning Bread",
+      "obtained": "2026-07-17T18:28:41.000Z",
+      "timestamp": 1784312921
+    },
+    {
+      "id": 2967,
+      "name": "Starry Night",
+      "obtained": "2026-07-17T18:28:41.000Z",
+      "timestamp": 1784312921
+    },
+    {
+      "id": 2966,
+      "name": "Found in Translation",
+      "obtained": "2026-07-17T18:28:41.000Z",
+      "timestamp": 1784312921
+    },
+    {
+      "id": 754,
+      "name": "An Eye for Detail: Blacksmith II",
+      "obtained": "2026-07-17T18:28:41.000Z",
+      "timestamp": 1784312921
+    },
+    {
+      "id": 760,
+      "name": "An Eye for Detail: Goldsmith II",
+      "obtained": "2026-07-17T15:30:52.000Z",
+      "timestamp": 1784302252
+    },
+    {
       "id": 3988,
       "name": "Satisfaction Guaranteed: Aunt Tii's Tacos III",
       "obtained": "2026-07-12T00:10:57.000Z",
@@ -8257,5 +8287,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-17T13:48:13.805Z"
+  "lastUpdated": "2026-07-17T19:17:32.759Z"
 }
