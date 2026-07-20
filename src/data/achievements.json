@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 1007,
+      "name": "Break It Down II",
+      "obtained": "2026-07-19T23:24:47.000Z",
+      "timestamp": 1784503487
+    },
+    {
       "id": 3473,
       "name": "Mixing It Up: Exemplar",
       "obtained": "2026-07-19T15:03:53.000Z",
@@ -8293,5 +8299,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-19T19:12:36.062Z"
+  "lastUpdated": "2026-07-20T03:52:06.594Z"
 }
