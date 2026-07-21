@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3634,
+      "name": "Highly Crescentialed",
+      "obtained": "2026-07-20T21:35:24.000Z",
+      "timestamp": 1784583324
+    },
+    {
       "id": 1007,
       "name": "Break It Down II",
       "obtained": "2026-07-19T23:24:47.000Z",
@@ -8299,5 +8305,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-07-20T19:48:58.281Z"
+  "lastUpdated": "2026-07-21T03:15:55.363Z"
 }
