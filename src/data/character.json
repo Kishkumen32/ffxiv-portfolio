@@ -23,6 +23,24 @@
   },
   "activity": [
     {
+      "id": "pMwBJqX17hCaFxnc:5",
+      "encounter_name": "Red Hot and Deep Blue",
+      "fight_name": "Red Hot and Deep Blue",
+      "name": "Red Hot and Deep Blue",
+      "classification": "Battle",
+      "start": "2026-07-29T20:04:33.845Z",
+      "end": "2026-07-29T20:14:25.826Z",
+      "duration": 592,
+      "kill": true,
+      "cleared": true,
+      "drops": [],
+      "party": 8,
+      "job": "Machinist",
+      "fight": 102,
+      "date": "2026-07-29",
+      "percentile": null
+    },
+    {
       "id": "4a7N8Y6GykLTgCnx:150",
       "encounter_name": "Red Hot and Deep Blue",
       "fight_name": "Red Hot and Deep Blue",
@@ -41,6 +59,24 @@
       "percentile": null
     },
     {
+      "id": "pMwBJqX17hCaFxnc:4",
+      "encounter_name": "Red Hot and Deep Blue",
+      "fight_name": "Red Hot and Deep Blue",
+      "name": "Red Hot and Deep Blue",
+      "classification": "Battle",
+      "start": "2026-07-29T19:58:24.227Z",
+      "end": "2026-07-29T20:03:50.307Z",
+      "duration": 326,
+      "kill": false,
+      "cleared": false,
+      "drops": [],
+      "party": 8,
+      "job": "Machinist",
+      "fight": 102,
+      "date": "2026-07-29",
+      "percentile": null
+    },
+    {
       "id": "4a7N8Y6GykLTgCnx:149",
       "encounter_name": "Red Hot and Deep Blue",
       "fight_name": "Red Hot and Deep Blue",
@@ -49,6 +85,24 @@
       "start": "2026-07-29T19:58:24.227Z",
       "end": "2026-07-29T20:03:50.307Z",
       "duration": 326,
+      "kill": false,
+      "cleared": false,
+      "drops": [],
+      "party": 8,
+      "job": "Machinist",
+      "fight": 102,
+      "date": "2026-07-29",
+      "percentile": null
+    },
+    {
+      "id": "pMwBJqX17hCaFxnc:3",
+      "encounter_name": "Red Hot and Deep Blue",
+      "fight_name": "Red Hot and Deep Blue",
+      "name": "Red Hot and Deep Blue",
+      "classification": "Battle",
+      "start": "2026-07-29T19:49:04.470Z",
+      "end": "2026-07-29T19:57:16.969Z",
+      "duration": 492,
       "kill": false,
       "cleared": false,
       "drops": [],
@@ -77,6 +131,24 @@
       "percentile": null
     },
     {
+      "id": "pMwBJqX17hCaFxnc:2",
+      "encounter_name": "Red Hot and Deep Blue",
+      "fight_name": "Red Hot and Deep Blue",
+      "name": "Red Hot and Deep Blue",
+      "classification": "Battle",
+      "start": "2026-07-29T19:46:18.383Z",
+      "end": "2026-07-29T19:48:40.182Z",
+      "duration": 142,
+      "kill": false,
+      "cleared": false,
+      "drops": [],
+      "party": 8,
+      "job": "Machinist",
+      "fight": 102,
+      "date": "2026-07-29",
+      "percentile": null
+    },
+    {
       "id": "4a7N8Y6GykLTgCnx:147",
       "encounter_name": "Red Hot and Deep Blue",
       "fight_name": "Red Hot and Deep Blue",
@@ -91,6 +163,24 @@
       "party": 8,
       "job": "Machinist",
       "fight": 102,
+      "date": "2026-07-29",
+      "percentile": null
+    },
+    {
+      "id": "pMwBJqX17hCaFxnc:1",
+      "encounter_name": "Vamp Fatale",
+      "fight_name": "Vamp Fatale",
+      "name": "Vamp Fatale",
+      "classification": "Battle",
+      "start": "2026-07-29T19:20:49.973Z",
+      "end": "2026-07-29T19:30:18.308Z",
+      "duration": 568,
+      "kill": true,
+      "cleared": true,
+      "drops": [],
+      "party": 8,
+      "job": "Machinist",
+      "fight": 101,
       "date": "2026-07-29",
       "percentile": null
     },
@@ -2633,24 +2723,6 @@
       "percentile": null
     },
     {
-      "id": "wMcyhDH8Z7mvdzp9:42",
-      "encounter_name": "Vamp Fatale",
-      "fight_name": "Vamp Fatale",
-      "name": "Vamp Fatale",
-      "classification": "Battle",
-      "start": "2026-05-26T12:09:53.823Z",
-      "end": "2026-05-26T12:18:57.769Z",
-      "duration": 544,
-      "kill": true,
-      "cleared": true,
-      "drops": [],
-      "party": 8,
-      "job": "Gunbreaker",
-      "fight": 101,
-      "date": "2026-05-26",
-      "percentile": null
-    },
-    {
       "id": "3LjR8fkqxhY6b2Hw:16",
       "encounter_name": "Red Hot and Deep Blue",
       "fight_name": "Red Hot and Deep Blue",
@@ -2941,5 +3013,5 @@
   ],
   "progression": [],
   "fflogs": null,
-  "lastUpdated": "2026-07-30T14:12:48.337Z"
+  "lastUpdated": "2026-07-30T19:40:18.529Z"
 }
