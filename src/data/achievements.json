@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 763,
+      "name": "An Eye for Detail: Leatherworker II",
+      "obtained": "2026-08-01T18:50:27.000Z",
+      "timestamp": 1785610227
+    },
+    {
       "id": 3941,
       "name": "Gently Does It",
       "obtained": "2026-07-29T06:36:00.000Z",
@@ -8335,5 +8341,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-08-01T13:37:53.790Z"
+  "lastUpdated": "2026-08-01T19:16:05.175Z"
 }
