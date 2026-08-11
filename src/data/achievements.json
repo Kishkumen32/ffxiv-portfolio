@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3990,
+      "name": "Satisfaction Guaranteed: Aunt Tii's Tacos V",
+      "obtained": "2026-08-11T02:29:12.000Z",
+      "timestamp": 1786415352
+    },
+    {
       "id": 779,
       "name": "An Eye for Quantity: Botanist III",
       "obtained": "2026-08-05T04:05:08.000Z",
@@ -8347,5 +8353,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-08-11T02:02:53.105Z"
+  "lastUpdated": "2026-08-11T07:15:08.928Z"
 }
