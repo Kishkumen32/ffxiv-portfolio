@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 1008,
+      "name": "Break It Down III",
+      "obtained": "2026-08-17T03:24:48.000Z",
+      "timestamp": 1786937088
+    },
+    {
       "id": 3874,
       "name": "Summertime Drifter",
       "obtained": "2026-08-16T17:35:29.000Z",
@@ -8359,5 +8365,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-08-17T01:36:51.917Z"
+  "lastUpdated": "2026-08-17T07:04:06.247Z"
 }
