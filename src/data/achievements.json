@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3943,
+      "name": "Onward and Upward",
+      "obtained": "2026-09-08T12:02:47.000Z",
+      "timestamp": 1788868967
+    },
+    {
       "id": 3875,
       "name": "Thankful Thirteen",
       "obtained": "2026-08-30T02:05:10.000Z",
@@ -8371,5 +8377,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-09-08T10:56:53.632Z"
+  "lastUpdated": "2026-09-08T16:21:22.216Z"
 }
