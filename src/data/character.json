@@ -1299,45 +1299,9 @@
       "fight": 102,
       "date": "2026-06-06",
       "percentile": null
-    },
-    {
-      "id": "xbr2T87NPFj9GQRW:2",
-      "encounter_name": "Vamp Fatale",
-      "fight_name": "Vamp Fatale",
-      "name": "Vamp Fatale",
-      "classification": "Battle",
-      "start": "2026-05-26T13:48:53.710Z",
-      "end": "2026-05-26T13:58:46.175Z",
-      "duration": 592,
-      "kill": true,
-      "cleared": true,
-      "drops": [],
-      "party": 8,
-      "job": "Dragoon",
-      "fight": 101,
-      "date": "2026-05-26",
-      "percentile": null
-    },
-    {
-      "id": "xbr2T87NPFj9GQRW:1",
-      "encounter_name": "Vamp Fatale",
-      "fight_name": "Vamp Fatale",
-      "name": "Vamp Fatale",
-      "classification": "Battle",
-      "start": "2026-05-26T13:42:17.201Z",
-      "end": "2026-05-26T13:48:33.079Z",
-      "duration": 376,
-      "kill": false,
-      "cleared": false,
-      "drops": [],
-      "party": 8,
-      "job": "Dragoon",
-      "fight": 101,
-      "date": "2026-05-26",
-      "percentile": null
     }
   ],
   "progression": [],
   "fflogs": null,
-  "lastUpdated": "2026-09-30T22:03:24.344Z"
+  "lastUpdated": "2026-10-01T05:06:44.080Z"
 }
