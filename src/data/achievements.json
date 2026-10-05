@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 144,
+      "name": "Working the Bellows: Initiate",
+      "obtained": "2026-10-05T03:29:23.000Z",
+      "timestamp": 1791170963
+    },
+    {
       "id": 3943,
       "name": "Onward and Upward",
       "obtained": "2026-09-08T12:02:47.000Z",
@@ -8377,5 +8383,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-10-04T21:05:24.460Z"
+  "lastUpdated": "2026-10-05T04:55:19.058Z"
 }
