@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3945,
+      "name": "Dire, Dire Deepcroft",
+      "obtained": "2026-10-19T02:13:08.000Z",
+      "timestamp": 1792375988
+    },
+    {
       "id": 144,
       "name": "Working the Bellows: Initiate",
       "obtained": "2026-10-05T03:29:23.000Z",
@@ -8383,5 +8389,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-10-18T20:22:13.079Z"
+  "lastUpdated": "2026-10-19T04:01:00.973Z"
 }
