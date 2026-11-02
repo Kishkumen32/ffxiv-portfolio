@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 4070,
+      "name": "Masterstroke I",
+      "obtained": "2026-11-02T04:33:21.000Z",
+      "timestamp": 1793594001
+    },
+    {
       "id": 3945,
       "name": "Dire, Dire Deepcroft",
       "obtained": "2026-10-19T02:13:08.000Z",
@@ -8389,5 +8395,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-11-01T21:52:57.944Z"
+  "lastUpdated": "2026-11-02T05:17:59.061Z"
 }
