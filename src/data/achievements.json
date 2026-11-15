@@ -1,6 +1,12 @@
 {
   "achievements": [
     {
+      "id": 3074,
+      "name": "As Suits a Hero",
+      "obtained": "2026-11-14T23:33:00.000Z",
+      "timestamp": 1794699180
+    },
+    {
       "id": 4070,
       "name": "Masterstroke I",
       "obtained": "2026-11-02T04:33:21.000Z",
@@ -8395,5 +8401,5 @@
       "timestamp": 1561821440
     }
   ],
-  "lastUpdated": "2026-11-14T22:10:21.453Z"
+  "lastUpdated": "2026-11-15T05:42:57.418Z"
 }
